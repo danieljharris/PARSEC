@@ -489,6 +489,7 @@ GameObject:
   - component: {fileID: 198269730}
   - component: {fileID: 198269727}
   - component: {fileID: 198269732}
+  - component: {fileID: 198269733}
   m_Layer: 0
   m_Name: EC2
   m_TagString: Untagged
@@ -537,6 +538,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e00db0b92b5cbb94f956639eefa006b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &198269733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198269726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 117f92f9150de0547a195cd6eb718331, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info: 'EC2 Instance
+
+    Connections:
+
+    - Laptop 2'
 --- !u!1 &226754454
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,6 +566,7 @@ GameObject:
   - component: {fileID: 226754459}
   - component: {fileID: 226754456}
   - component: {fileID: 226754460}
+  - component: {fileID: 226754461}
   m_Layer: 0
   m_Name: S3
   m_TagString: Untagged
@@ -596,6 +615,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e00db0b92b5cbb94f956639eefa006b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &226754461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226754454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 117f92f9150de0547a195cd6eb718331, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info: 'S3 Bucket
+
+    Connections:
+
+    - None'
 --- !u!1001 &279106059
 PrefabInstance:
   m_ObjectHideFlags: 0
