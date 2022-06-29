@@ -13,16 +13,12 @@ public class ResettableList : MonoBehaviour
     }
     public void ResetTransform()
     {
-        Debug.Log("ResetTransform");
-
         NetworkObject netObj = GetComponent<NetworkObject>();
-        // if(netObj == null || !netObj.HasInputAuthority || !netObj.HasStateAuthority) 
-        // {
-        //     return;
-        // }
-
-        Debug.Log("ResetTransform count: " + _resettableObjectsOrigins.Count);
-
+        if(netObj == null || !netObj.HasInputAuthority || !netObj.HasStateAuthority) 
+        {
+            return;
+        }
+        
         foreach((GameObject go, Vector3 pos, Quaternion rot) in _resettableObjectsOrigins)
         {
             go.transform.position = pos;
