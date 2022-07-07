@@ -15,6 +15,7 @@ public class ConnectionGroup : MonoBehaviour
     public ConnectionInfo[] connections;
 
     private HashSet<Node> nodes = new HashSet<Node>(new ReferenceEqualityComparer<Node>());
+    private List<(GameObject, GameObject, LineRenderer)> nodePairs = new List<(GameObject, GameObject, LineRenderer)>();
 
     void Start()
     {
@@ -26,11 +27,19 @@ public class ConnectionGroup : MonoBehaviour
 
             LineRenderer line = CreateEdges(source, target, connections[i].color, linePrefab);
             if (line == null) continue;
-
+            
             ConfigLine(line, connections[i].color);
-            DrawLine(connections[i].source, connections[i].target, line);
+
+            nodePairs.Add((connections[i].source, connections[i].target, line));
         }
     }
+    
+    void Update()
+    {
+        foreach ((GameObject source, GameObject target, LineRenderer line) in nodePairs)
+            DrawLine(source, target, line);
+    }
+
     private (Node source, Node target) CreateNodes(GameObject source, GameObject target)
     {
         Node sourceNode = source.GetComponent<Node>();
