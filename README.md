@@ -7,7 +7,7 @@ This is an in development Unity project to visualize computer networks and confi
 - Stake Holder Communication
 
 # Dependencies / Assets
-- [Unity 2021.3.5f1](https://unity3d.com/get-unity/)
+- [Unity 2021.3.8f1](https://unity3d.com/get-unity/)
 - XR Integration ([VRTK v4](https://vrtoolkit.readme.io/v4.0.0))
 - Multiplayer ([Photon Fusion](https://www.photonengine.com/en-US/Fusion))
 - Laptop & Desk Models ([iPoly3D](https://assetstore.unity.com/packages/3d/environments/lowpoly-server-room-props-197268))
