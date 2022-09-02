@@ -8993,7 +8993,8 @@ GameObject:
   - component: {fileID: 2724949630759382796}
   - component: {fileID: 1912014509141183585}
   - component: {fileID: 796077272660226659}
-  - component: {fileID: 6498634087602082528}
+  - component: {fileID: 5915047883917856039}
+  - component: {fileID: 4297156852271499779}
   m_Layer: 0
   m_Name: Avatar XR - Highlightable
   m_TagString: Untagged
@@ -9083,7 +9084,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ResettableObjects:
   - {fileID: 2724949629113838144}
---- !u!114 &6498634087602082528
+--- !u!114 &5915047883917856039
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9092,11 +9093,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 2724949630759382799}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a599efee520e78b45bf044211f5d6758, type: 3}
+  m_Script: {fileID: 11500000, guid: cf29924fa73fea74f93e5162541e9bd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Avatar: {fileID: 2724949630759382797}
   Headset: {fileID: 2724949629871164661}
+  LeftTriggerPress: {fileID: 8509387965377491014}
+  LeftController: {fileID: 2724949629239568666}
+  RightTriggerPress: {fileID: 8509387965153885288}
+  RightController: {fileID: 2724949630621087619}
+--- !u!114 &4297156852271499779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2724949630759382799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21afa808bfbd44644adebb8aefe5edd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Avatar: {fileID: 2724949630759382797}
   LeftTriggerPress: {fileID: 8509387965377491014}
   LeftController: {fileID: 2724949629239568666}
   RightTriggerPress: {fileID: 8509387965153885288}

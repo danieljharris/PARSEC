@@ -1,9 +1,9 @@
 using UnityEngine;
 
 // Debug Tools
-public class Db : MonoBehaviour
+public class Tools : MonoBehaviour
 {
-    public static GameObject CreateSphere(Vector3 position, Color color)
+    public static GameObject Sphere(Vector3 position, Color color)
     {
         GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
         sphere.transform.position = position;
@@ -11,7 +11,7 @@ public class Db : MonoBehaviour
         sphere.GetComponent<Renderer>().material.color = color;
         return sphere;
     }
-    public static GameObject CreateSphere(Vector3 position, Color color, Vector3 size)
+    public static GameObject Sphere(Vector3 position, Color color, Vector3 size)
     {
         GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
         sphere.transform.position = position;
