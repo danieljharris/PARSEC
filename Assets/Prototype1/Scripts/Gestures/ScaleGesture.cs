@@ -6,16 +6,30 @@ public class ScaleGesture : Gesture
     // Avatar
     [SerializeField] Transform Avatar;
 
-    // Left Hand
-    [SerializeField] BooleanAction LeftTriggerPress;
+    // Controller Transforms
     [SerializeField] Transform LeftController;
-
-    // Right Hand
-    [SerializeField] BooleanAction RightTriggerPress;
     [SerializeField] Transform RightController;
+
+    // Trigger Actions
+    [SerializeField] BooleanAction LeftTriggerPress;
+    [SerializeField] BooleanAction RightTriggerPress;
 
     private float InitialDistance;
     private Vector3 InitialScale;
+
+    public ScaleGesture(Transform Avatar,
+                        Transform Aliases,
+                        BooleanAction LeftTriggerPress,
+                        BooleanAction RightTriggerPress)
+    {
+        this.Avatar = Avatar;
+
+        this.LeftController  = Aliases.Find("LeftControllerAlias");
+        this.RightController = Aliases.Find("RightControllerAlias");
+
+        this.LeftTriggerPress = LeftTriggerPress;
+        this.RightTriggerPress = RightTriggerPress;
+    }
 
     // Gesture Overrides
     public override bool Trigger() => LeftTriggerPress.Value && RightTriggerPress.Value;

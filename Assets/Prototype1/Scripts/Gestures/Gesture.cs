@@ -4,7 +4,7 @@ public abstract class Gesture : MonoBehaviour
 {
     private bool Active = false;
 
-    void Update()
+    public void Run()
     {
         // Stop Gesture
         if (Active && !Trigger())
