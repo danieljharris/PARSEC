@@ -1,59 +1,45 @@
 using Zinnia.Action;
 using UnityEngine;
 
-public class MoveGesture : Gesture
+public class MoveGesture : SingleHandGesture
 {
-    // Avatar
-    [SerializeField] Transform Avatar;
-    [SerializeField] Transform Headset;
+    [SerializeField] Transform Avatar, Headset, LController, RController; // Avatar + Headset + Controllers
+    [SerializeField] BooleanAction LButton,  RButton; // Button Actions
 
-    // Controller Transforms
-    [SerializeField] Transform LeftController;
-    [SerializeField] Transform RightController;
-
-    // Trigger Actions
-    [SerializeField] BooleanAction LeftTriggerPress;
-    [SerializeField] BooleanAction RightTriggerPress;
-
-    enum ControllerLR { Left, Right }
-    private ControllerLR TriggeredController;
-    private Vector3 InitialAvatarPosition;
-    private Vector3 InitialControllerPosition;
+    private Vector3 InitialAvatarPosition, InitialControllerPosition;
 
     public MoveGesture(Transform Avatar,
                        Transform Aliases,
-                       BooleanAction LeftTriggerPress,
-                       BooleanAction RightTriggerPress)
+                       BooleanAction LButton,
+                       BooleanAction RButton)
     {
         this.Avatar = Avatar;
 
-        this.Headset         = Aliases.Find("HeadsetAlias");
-        this.LeftController  = Aliases.Find("LeftControllerAlias");
-        this.RightController = Aliases.Find("RightControllerAlias");
+        this.Headset     = Aliases.Find("HeadsetAlias");
+        this.LController = Aliases.Find("LeftControllerAlias");
+        this.RController = Aliases.Find("RightControllerAlias");
 
-        this.LeftTriggerPress = LeftTriggerPress;
-        this.RightTriggerPress = RightTriggerPress;
+        this.LButton = LButton;
+        this.RButton = RButton;
     }
 
     // Gesture Overrides
-    public override bool Trigger() => LeftTriggerPress.Value ^ RightTriggerPress.Value;
+    public override bool LeftButton() => LButton.Value;
+    public override bool RightButton() => RButton.Value;
     public override void StartGesture()
     {
+        base.StartGesture();
         InitialAvatarPosition = Avatar.position;
-        
-        TriggeredController = LeftTriggerPress.Value ? ControllerLR.Left : ControllerLR.Right;
         InitialControllerPosition = GetRelativeControllerPosition();
     }
     public override void GestureActive() => Avatar.position = CalculatePosition();
 
     // Movement Calculations
-    private Vector3 GetRelativeControllerPosition() =>
-        TriggeredController switch
-        {
-            ControllerLR.Left => Headset.InverseTransformPoint(LeftController.position),
-            ControllerLR.Right => Headset.InverseTransformPoint(RightController.position),
-            _ => throw new System.Exception("Invalid TriggeredController")
-        };
+    private Vector3 GetRelativeControllerPosition()
+    {
+        if (LControllerActive) return Headset.InverseTransformPoint(LController.position);
+        else                   return Headset.InverseTransformPoint(RController.position);
+    }
     private Vector3 CalculatePosition()
     {
         float movementMultiplier = 4;

@@ -3,36 +3,28 @@ using UnityEngine;
 
 public class ScaleGesture : Gesture
 {
-    // Avatar
-    [SerializeField] Transform Avatar;
-
-    // Controller Transforms
-    [SerializeField] Transform LeftController;
-    [SerializeField] Transform RightController;
-
-    // Trigger Actions
-    [SerializeField] BooleanAction LeftTriggerPress;
-    [SerializeField] BooleanAction RightTriggerPress;
+    [SerializeField] Transform Avatar, LController, RController; // Avatar + Headset + Controllers
+    [SerializeField] BooleanAction LButton,  RButton; // Button Actions
 
     private float InitialDistance;
     private Vector3 InitialScale;
 
     public ScaleGesture(Transform Avatar,
                         Transform Aliases,
-                        BooleanAction LeftTriggerPress,
-                        BooleanAction RightTriggerPress)
+                        BooleanAction LButton,
+                        BooleanAction RButton)
     {
         this.Avatar = Avatar;
 
-        this.LeftController  = Aliases.Find("LeftControllerAlias");
-        this.RightController = Aliases.Find("RightControllerAlias");
+        this.LController = Aliases.Find("LeftControllerAlias");
+        this.RController = Aliases.Find("RightControllerAlias");
 
-        this.LeftTriggerPress = LeftTriggerPress;
-        this.RightTriggerPress = RightTriggerPress;
+        this.LButton = LButton;
+        this.RButton = RButton;
     }
 
     // Gesture Overrides
-    public override bool Trigger() => LeftTriggerPress.Value && RightTriggerPress.Value;
+    public override bool Trigger() => LButton.Value && RButton.Value;
     public override void StartGesture()
     {
         InitialDistance = ControllerSpreadDistance();
@@ -42,7 +34,7 @@ public class ScaleGesture : Gesture
 
     // Scale Calculations
     private float ControllerSpreadDistance() =>
-        Vector3.Distance(LeftController.position, RightController.position);
+        Vector3.Distance(LController.position, RController.position);
     private Vector3 CalculateScale()
     {
         float scaleFactor = InitialDistance - ControllerSpreadDistance();

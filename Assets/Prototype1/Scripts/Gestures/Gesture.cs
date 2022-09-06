@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public abstract class Gesture : MonoBehaviour
+public abstract class Gesture
 {
     private bool Active = false;
 

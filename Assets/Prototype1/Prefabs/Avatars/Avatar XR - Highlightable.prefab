@@ -8994,6 +8994,7 @@ GameObject:
   - component: {fileID: 1912014509141183585}
   - component: {fileID: 796077272660226659}
   - component: {fileID: 8299679802204171533}
+  - component: {fileID: 6464170537942156712}
   m_Layer: 0
   m_Name: Avatar XR - Highlightable
   m_TagString: Untagged
@@ -9090,15 +9091,37 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2724949630759382799}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de1404169338cc0448353d79bded9531, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Avatar: {fileID: 2724949630759382797}
   Aliases: {fileID: 2724949630566005366}
-  LeftTriggerPress: {fileID: 8509387965377491014}
-  RightTriggerPress: {fileID: 8509387965153885288}
+  LButton: {fileID: 8509387965377491014}
+  RButton: {fileID: 8509387965153885288}
+  debugCubePrefab: {fileID: 0}
+--- !u!114 &6464170537942156712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2724949630759382799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 978f4d4e247477f40bd0cf23f73b9740, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Avatar: {fileID: 2724949630759382797}
+  LeftControllerAlias: {fileID: 2724949629239568666}
+  RightControllerAlias: {fileID: 2724949630621087619}
+  LeftInteractor: {fileID: 2724949629560476786}
+  RightInteractor: {fileID: 2724949630843089364}
+  LButton: {fileID: 8509387965377491014}
+  RButton: {fileID: 8509387965153885288}
+  debugCubePrefab: {fileID: 1547574722443877608, guid: 28f077adeff1cad4385934dc2828eb84, type: 3}
+  debugCubePrefab2: {fileID: 1547574722443877608, guid: dcd7faaabd4cf4b4a8c139177e74f2ec, type: 3}
 --- !u!1 &2724949630761154094
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,21 +3,21 @@ using UnityEngine;
 
 public class GestureManager : MonoBehaviour
 {
-    // Avatar
-    [SerializeField] Transform Avatar;
-    [SerializeField] Transform Aliases;
-    [SerializeField] BooleanAction LeftTriggerPress;
-    [SerializeField] BooleanAction RightTriggerPress;
+    [SerializeField] Transform Avatar, Aliases; // Avatar + Aliases
+    [SerializeField] BooleanAction LButton,  RButton; // Button Actions
+    [SerializeField] GameObject debugCubePrefab; // Debugging tool
 
-    Gesture[] Gestures;
+    private Gesture[] Gestures;
 
     void Start()
     {
+        GameObject debugCube = Instantiate(debugCubePrefab);
+
         Gestures = new Gesture[]
         {
-            // new MoveGesture(Avatar, Aliases, LeftTriggerPress, RightTriggerPress),
-            // new ScaleGesture(Avatar, Aliases, LeftTriggerPress, RightTriggerPress),
-            new RotateGesture(Avatar, Aliases, LeftTriggerPress, RightTriggerPress)
+            // new MoveGesture(Avatar, Aliases, LButton, RButton),
+            // new ScaleGesture(Avatar, Aliases, LButton, RButton),
+            new RotateGesture(Avatar, Aliases, LButton, RButton, debugCube)
         };
     }
 
