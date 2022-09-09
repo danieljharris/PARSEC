@@ -11,6 +11,10 @@ public class RotateGesture : SingleHandGesture
     private Quaternion InitControllerRot, InitRelativeControllerRot, InitAvatarRot, InitDebugRot;
     private GameObject debugCube; //Debugging tool
 
+
+
+
+
     public RotateGesture(Transform Avatar,
                          Transform Aliases,
                          BooleanAction LButton,
