@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public abstract class Gesture
+public abstract class Gesture : MonoBehaviour
 {
     private bool Active = false;
 
-    public void Run()
+    void Update()
     {
         // Stop Gesture
         if (Active && !Trigger())

@@ -9,19 +9,6 @@ public class ScaleGesture : Gesture
     private float InitialDistance;
     private Vector3 InitialScale;
 
-    public ScaleGesture(Transform Avatar,
-                        Transform Aliases,
-                        BooleanAction LButton,
-                        BooleanAction RButton)
-    {
-        this.Avatar = Avatar;
-
-        this.LController = Aliases.Find("LeftControllerAlias");
-        this.RController = Aliases.Find("RightControllerAlias");
-
-        this.LButton = LButton;
-        this.RButton = RButton;
-    }
 
     // Gesture Overrides
     public override bool Trigger() => LButton.Value && RButton.Value;
@@ -31,6 +18,7 @@ public class ScaleGesture : Gesture
         InitialScale = Avatar.localScale;
     }
     public override void GestureActive() => Avatar.localScale = CalculateScale();
+
 
     // Scale Calculations
     private float ControllerSpreadDistance() =>

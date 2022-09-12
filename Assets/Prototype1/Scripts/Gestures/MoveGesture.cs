@@ -8,20 +8,6 @@ public class MoveGesture : SingleHandGesture
 
     private Vector3 InitialAvatarPosition, InitialControllerPosition;
 
-    public MoveGesture(Transform Avatar,
-                       Transform Aliases,
-                       BooleanAction LButton,
-                       BooleanAction RButton)
-    {
-        this.Avatar = Avatar;
-
-        this.Headset     = Aliases.Find("HeadsetAlias");
-        this.LController = Aliases.Find("LeftControllerAlias");
-        this.RController = Aliases.Find("RightControllerAlias");
-
-        this.LButton = LButton;
-        this.RButton = RButton;
-    }
 
     // Gesture Overrides
     public override bool LeftButton() => LButton.Value;
@@ -33,6 +19,7 @@ public class MoveGesture : SingleHandGesture
         InitialControllerPosition = GetRelativeControllerPosition();
     }
     public override void GestureActive() => Avatar.position = CalculatePosition();
+
 
     // Movement Calculations
     private Vector3 GetRelativeControllerPosition()
