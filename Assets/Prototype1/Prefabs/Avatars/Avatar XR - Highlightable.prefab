@@ -4136,6 +4136,8 @@ GameObject:
   - component: {fileID: 2724949629560476791}
   - component: {fileID: 2724949629560476785}
   - component: {fileID: 2724949629560476790}
+  - component: {fileID: 8694215096064312819}
+  - component: {fileID: 7683417143220883634}
   m_Layer: 0
   m_Name: Interactions.Interactor
   m_TagString: Untagged
@@ -4183,7 +4185,19 @@ MonoBehaviour:
       m_Calls: []
   Grabbed:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7683417143220883634}
+        m_TargetAssemblyTypeName: WorldGrabbable, Assembly-CSharp
+        m_MethodName: Grab
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   Ungrabbed:
     m_PersistentCalls:
       m_Calls: []
@@ -4301,6 +4315,50 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 58d6cb68905534b4d8baf13b96b36cd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8694215096064312819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2724949629560476786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efa8f36bc7d05684daf439b863eeb4da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grabAction: {fileID: 8509387965377491014}
+  velocityTracker: {fileID: 2724949630621087618}
+  grabPrecognition: 0.1
+  Touched:
+    m_PersistentCalls:
+      m_Calls: []
+  Untouched:
+    m_PersistentCalls:
+      m_Calls: []
+  Grabbed:
+    m_PersistentCalls:
+      m_Calls: []
+  Ungrabbed:
+    m_PersistentCalls:
+      m_Calls: []
+  grabAttachPoint: {fileID: 2724949630608686035}
+  precisionAttachPoint: {fileID: 2724949630597972559}
+  avatarContainer: {fileID: 2724949629876733845}
+  touchConfiguration: {fileID: 2724949629796386150}
+  grabConfiguration: {fileID: 2724949629639252269}
+--- !u!114 &7683417143220883634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2724949629560476786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 161244e5874fa394c8621d2adb0ed01a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2724949629611952680
@@ -9093,7 +9151,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2724949630759382799}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 21afa808bfbd44644adebb8aefe5edd8, type: 3}
   m_Name: 
@@ -9110,7 +9168,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2724949630759382799}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf29924fa73fea74f93e5162541e9bd4, type: 3}
   m_Name: 
@@ -9498,6 +9556,8 @@ GameObject:
   - component: {fileID: 2724949630843089369}
   - component: {fileID: 2724949630843089371}
   - component: {fileID: 2724949630843089368}
+  - component: {fileID: 9014428625142155636}
+  - component: {fileID: 1929323186494932782}
   m_Layer: 0
   m_Name: Interactions.Interactor
   m_TagString: Untagged
@@ -9545,7 +9605,19 @@ MonoBehaviour:
       m_Calls: []
   Grabbed:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1929323186494932782}
+        m_TargetAssemblyTypeName: WorldGrabbable, Assembly-CSharp
+        m_MethodName: Grab
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   Ungrabbed:
     m_PersistentCalls:
       m_Calls: []
@@ -9663,6 +9735,50 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 58d6cb68905534b4d8baf13b96b36cd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9014428625142155636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2724949630843089364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efa8f36bc7d05684daf439b863eeb4da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grabAction: {fileID: 8509387965153885288}
+  velocityTracker: {fileID: 2724949630621087618}
+  grabPrecognition: 0.1
+  Touched:
+    m_PersistentCalls:
+      m_Calls: []
+  Untouched:
+    m_PersistentCalls:
+      m_Calls: []
+  Grabbed:
+    m_PersistentCalls:
+      m_Calls: []
+  Ungrabbed:
+    m_PersistentCalls:
+      m_Calls: []
+  grabAttachPoint: {fileID: 2724949630608686035}
+  precisionAttachPoint: {fileID: 2724949630597972559}
+  avatarContainer: {fileID: 2724949629876733845}
+  touchConfiguration: {fileID: 2724949629796386150}
+  grabConfiguration: {fileID: 2724949629639252269}
+--- !u!114 &1929323186494932782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2724949630843089364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 161244e5874fa394c8621d2adb0ed01a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2724949630843526351
