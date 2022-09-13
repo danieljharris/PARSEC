@@ -1,6 +1,8 @@
 using Zinnia.Action;
 using UnityEngine;
+using System;
 
+[Obsolete("Rotation is still WIP. Please do not use.", false)]
 public class RotateGesture : SingleHandGesture
 {
     [SerializeField] Transform Avatar; // Avatar

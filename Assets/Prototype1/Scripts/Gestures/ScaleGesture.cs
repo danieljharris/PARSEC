@@ -55,7 +55,7 @@ public class ScaleGesture : Gesture
 
         return newPosition;
     }
-    public Vector3 ScaleAround(Transform target, Vector3 pivot, float newScaleX)
+    public static Vector3 ScaleAround(Transform target, Vector3 pivot, float newScaleX)
     {
         Vector3 difference = target.localPosition - pivot;
         float relativeScale = newScaleX / target.localScale.x;
