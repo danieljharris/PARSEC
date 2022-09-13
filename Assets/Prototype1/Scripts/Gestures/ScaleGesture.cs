@@ -20,6 +20,10 @@ public class ScaleGesture : Gesture
     public override void ApplyGesture()
     {
         Vector3 newScale = CalculateScale();
+
+        // Set min bounds for scaling
+        if (newScale.x < 0.1f) newScale = new Vector3(0.1f, 0.1f, 0.1f);
+
         Vector3 newPosition = CalculatePosition(newScale);
 
         Avatar.localScale = newScale;
