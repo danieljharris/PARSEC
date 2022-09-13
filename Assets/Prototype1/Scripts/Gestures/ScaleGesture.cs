@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ScaleGesture : Gesture
 {
-    [SerializeField] Transform Avatar, LController, RController; // Avatar + Headset + Controllers
+    [SerializeField] Transform Avatar, Headset, LController, RController; // Avatar + Headset + Controllers
     [SerializeField] BooleanAction LButton,  RButton; // Button Actions
 
     private float InitialDistance;
@@ -17,7 +17,14 @@ public class ScaleGesture : Gesture
         InitialDistance = ControllerSpreadDistance();
         InitialScale = Avatar.localScale;
     }
-    public override void GestureActive() => Avatar.localScale = CalculateScale();
+    public override void ApplyGesture()
+    {
+        Vector3 newScale = CalculateScale();
+        Vector3 newPosition = CalculatePosition(newScale);
+
+        Avatar.localScale = newScale;
+        Avatar.localPosition = newPosition;
+    }
 
 
     // Scale Calculations
@@ -25,8 +32,34 @@ public class ScaleGesture : Gesture
         Vector3.Distance(LController.position, RController.position);
     private Vector3 CalculateScale()
     {
-        float scaleFactor = InitialDistance - ControllerSpreadDistance();
-        Vector3 newScale = InitialScale + Vector3.one * scaleFactor;
+        float scaleMultiplier = 2;
+
+        float distanceMoved = InitialDistance - ControllerSpreadDistance();
+        float scaleFactor = distanceMoved * scaleMultiplier;
+
+        Vector3 scaleFactorVector = Vector3.one * scaleFactor;
+        Vector3 newScale = InitialScale + scaleFactorVector;
+
         return newScale;
+    }
+
+
+    // Position Calculations
+    // To set pivot point just below headset
+    private Vector3 CalculatePosition(Vector3 newScale)
+    {
+        Vector3 pivot = Headset.position;
+        pivot.y = pivot.y - 2f;
+
+        Vector3 newPosition = ScaleAround(Avatar, pivot, newScale.x);
+
+        return newPosition;
+    }
+    public Vector3 ScaleAround(Transform target, Vector3 pivot, float newScaleX)
+    {
+        Vector3 difference = target.localPosition - pivot;
+        float relativeScale = newScaleX / target.localScale.x;
+        Vector3 newPosition = pivot + difference * relativeScale;
+        return newPosition;
     }
 }

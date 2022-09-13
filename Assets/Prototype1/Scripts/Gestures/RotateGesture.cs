@@ -33,7 +33,7 @@ public class RotateGesture : SingleHandGesture
         GameObject ActiveInteractor = LControllerActive ? LInteractor : RInteractor;
         joint.connectedBody = ActiveInteractor.GetComponent<Rigidbody>();
     }
-    public override void GestureActive() =>
+    public override void ApplyGesture() =>
         Avatar.transform.rotation = Quaternion.Inverse(RotationCube.transform.localRotation);
     public override void StopGesture()
     {

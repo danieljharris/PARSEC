@@ -24,12 +24,12 @@ public abstract class Gesture : MonoBehaviour
         // Gesture in progress
         if (Active)
         {
-            GestureActive();
+            ApplyGesture();
         }
     }
 
     abstract public bool Trigger();
     virtual public void StartGesture(){}
     virtual public void StopGesture(){}
-    virtual public void GestureActive(){}
+    virtual public void ApplyGesture(){}
 }

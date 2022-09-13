@@ -9099,6 +9099,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Avatar: {fileID: 2724949630759382797}
+  Headset: {fileID: 2724949629871164661}
   LController: {fileID: 2724949629239568666}
   RController: {fileID: 2724949630621087619}
   LButton: {fileID: 8509387965377491014}
@@ -9116,7 +9117,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Avatar: {fileID: 2724949630759382797}
-  Headset: {fileID: 2724949629871164661}
   LController: {fileID: 2724949629239568666}
   RController: {fileID: 2724949630621087619}
   LButton: {fileID: 8509387965377491014}
