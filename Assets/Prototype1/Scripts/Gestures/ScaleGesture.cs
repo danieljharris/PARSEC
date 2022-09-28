@@ -1,5 +1,6 @@
 using Zinnia.Action;
 using UnityEngine;
+using static Utility;
 
 public class ScaleGesture : Gesture
 {
@@ -57,13 +58,6 @@ public class ScaleGesture : Gesture
 
         Vector3 newPosition = ScaleAround(Avatar, pivot, newScale.x);
 
-        return newPosition;
-    }
-    public static Vector3 ScaleAround(Transform target, Vector3 pivot, float newScaleX)
-    {
-        Vector3 difference = target.localPosition - pivot;
-        float relativeScale = newScaleX / target.localScale.x;
-        Vector3 newPosition = pivot + difference * relativeScale;
         return newPosition;
     }
 }
