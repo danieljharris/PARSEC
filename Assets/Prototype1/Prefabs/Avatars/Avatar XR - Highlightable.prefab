@@ -9054,7 +9054,6 @@ MonoBehaviour:
   NetworkedBehaviours:
   - {fileID: 1912014509141183585}
   - {fileID: 4420840873417421638}
-  - {fileID: 7763031823342767972}
   - {fileID: 3895623536571650557}
   - {fileID: 2776765026038399662}
   SimulationBehaviours: []
@@ -10070,10 +10069,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4242475847705997487}
   - component: {fileID: 3341524149338994486}
-  - component: {fileID: 7763031823342767972}
   m_Layer: 0
   m_Name: Head Collider
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10104,21 +10102,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.8, y: 0.8, z: 0.8}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7763031823342767972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2740532929688930424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bafd006aee94d88488096b3dd627a9b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _interpolationDataSource: 0
 --- !u!1 &4996162865390413849
 GameObject:
   m_ObjectHideFlags: 0
