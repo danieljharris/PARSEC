@@ -1,7 +1,5 @@
-using System;
 using Fusion;
 using Tilia.Interactions.Interactables.Interactables;
-using UnityEngine;
 
 public class NetworkInteractableDropper : NetworkBehaviour
 {

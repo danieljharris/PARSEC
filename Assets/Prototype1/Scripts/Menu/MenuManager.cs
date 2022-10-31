@@ -1,12 +1,13 @@
 using Zinnia.Action;
 using UnityEngine;
 
-public class WristMenu : MonoBehaviour
+public class MenuManager : MonoBehaviour
 {
     [SerializeField] BooleanAction MenuButton;
-    [SerializeField] GameObject Interface;
-    bool MenuShown = false;
-    bool MenuButtonHeld = false;
+    [SerializeField] Menu MainMenu;
+    Menu CurrentMenu;
+    private bool MenuShown = false;
+    private bool MenuButtonHeld = false;
 
     void Update()
     {
@@ -25,19 +26,29 @@ public class WristMenu : MonoBehaviour
             if(!MenuShown) // Show Menu
             {
                 MenuShown = true;
-                Interface.SetActive(true);
+                CurrentMenu = MainMenu;
+                CurrentMenu.gameObject.SetActive(true);
             }
             else //Hide Menu
             {
                 MenuShown = false;
-                Interface.SetActive(false);
+                CurrentMenu.gameObject.SetActive(false);
             }
         }
     }
 
     public void Hide()
     {
+        if(!MenuShown) return;
+
         MenuShown = false;
-        Interface.SetActive(false);
+        CurrentMenu.gameObject.SetActive(false);
+    }
+
+    public void Switch(Menu newMenu)
+    {
+        CurrentMenu.gameObject.SetActive(false);
+        CurrentMenu = newMenu;
+        CurrentMenu.gameObject.SetActive(true);
     }
 }
