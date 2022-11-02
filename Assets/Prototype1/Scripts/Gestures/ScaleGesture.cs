@@ -37,6 +37,12 @@ public class ScaleGesture : Gesture
         Vector3.Distance(LController.position, RController.position);
     private Vector3 CalculateScale()
     {
+        /* 
+        New Scale = Previous Scale of User
+                    + ((Starting Distance between Controllers
+                    - Current Distance Between Controllers) * Scale Multiplier)
+        */
+
         float scaleMultiplier = 2;
 
         float distanceMoved = InitialDistance - ControllerSpreadDistance();
