@@ -3,5 +3,5 @@ using UnityEngine;
 public class ResetWand : MonoBehaviour
 {
     [SerializeField] ResettableWand Wand;
-    public void Reset() => Wand.Reset();
+    public void WandReset() => Wand.WandReset();
 }

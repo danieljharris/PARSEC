@@ -9,6 +9,7 @@ public class ScaleGesture : Gesture
 
     private float InitialDistance;
     private Vector3 InitialScale;
+    private float previousDistance = 0f;
 
 
     // Gesture Overrides
@@ -23,7 +24,7 @@ public class ScaleGesture : Gesture
         Vector3 newScale = CalculateScale();
 
         // Set min bounds for scaling
-        if (newScale.x < 0.1f) newScale = new Vector3(0.1f, 0.1f, 0.1f);
+        if (newScale.x < 0.1f) return;
 
         Vector3 newPosition = CalculatePosition(newScale);
 
@@ -34,7 +35,7 @@ public class ScaleGesture : Gesture
 
     // Scale Calculations
     private float ControllerSpreadDistance() =>
-        Vector3.Distance(LController.position, RController.position);
+        Vector3.Distance(LController.localPosition, RController.localPosition);
     private Vector3 CalculateScale()
     {
         /* 
@@ -43,9 +44,10 @@ public class ScaleGesture : Gesture
                     - Current Distance Between Controllers) * Scale Multiplier)
         */
 
-        float scaleMultiplier = 2;
+        float scaleMultiplier = Avatar.localScale.x;
 
-        float distanceMoved = InitialDistance - ControllerSpreadDistance();
+        float currentDistance = ControllerSpreadDistance();
+        float distanceMoved = InitialDistance - currentDistance;
         float scaleFactor = distanceMoved * scaleMultiplier;
 
         Vector3 scaleFactorVector = Vector3.one * scaleFactor;

@@ -16,15 +16,19 @@ public class ResettableWand : MonoBehaviour
         OriginalRotation = transform.localRotation;
         OriginalScale = transform.localScale;
     }
-    public void Reset()
+    public void WandReset()
     {
-        GetComponent<InteractableFacade>().Ungrab();
+        InteractableFacade facade = GetComponent<InteractableFacade>();
+        if (facade == null) return;
+        facade.Ungrab();
 
         transform.parent = OriginalParent;
         transform.localPosition = OriginalPosition;
         transform.localRotation = OriginalRotation;
         transform.localScale = OriginalScale;
 
-        GetComponent<WandPickup>().AttachedToMenu = true;
+        WandPickup pickup = GetComponent<WandPickup>();
+        if (pickup == null) return;
+        pickup.AttachedToMenu = true;
     }
 }
