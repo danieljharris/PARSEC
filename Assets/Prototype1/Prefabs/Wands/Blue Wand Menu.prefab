@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 831516025961158712}
   - component: {fileID: 831516025961158709}
-  - component: {fileID: 5484156006969256065}
   m_Layer: 0
   m_Name: Wand Tip
   m_TagString: Untagged
@@ -47,20 +46,6 @@ CapsuleCollider:
   m_Height: 0.09764075
   m_Direction: 1
   m_Center: {x: 0.004199028, y: 0.295318, z: 0.0038045645}
---- !u!114 &5484156006969256065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 831516025961158713}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfd95f68eae033840a5ffbbff69f2e99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  color: {r: 0.20784315, g: 0.7960785, b: 0.9450981, a: 1}
-  colorID: 1
 --- !u!1 &1738712932028039917
 GameObject:
   m_ObjectHideFlags: 0

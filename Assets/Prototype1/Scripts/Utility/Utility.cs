@@ -12,12 +12,24 @@ public static class Utility
         return newPosition;
     }
 
-    // public static IEnumerator RunAtNextFrame(Action action)
+    // public static T GetOrAddComponent<T>(this GameObject gameObject) where T : Component
     // {
-    //     yield return new WaitForEndOfFrame();
+    //     if (gameObject.TryGetComponent<T>())
+    //         return gameObject.GetComponent<T>();
+    //     else     
+    //         return gameObject.AddComponent<T>() as T;
+    // }
 
-    //     action.Invoke();
+    public static T GetOrAddComponent<T>(this GameObject gameObject) where T : Component
+    {
+        if(gameObject.TryGetComponent<T>(out T t)) return t;
+        else return gameObject.AddComponent<T>();
+    }
 
-    //     yield return null;
+    // public static T GetOrAddComponent<T>(GameObject gameObject) where T : Component
+    // {
+    //     T component = gameObject.GetComponent<T>();
+    //     if (component == null) component = gameObject.AddComponent<T>();
+    //     return component;
     // }
 }

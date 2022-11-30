@@ -9,7 +9,6 @@ public class ScaleGesture : Gesture
 
     private float InitialDistance;
     private Vector3 InitialScale;
-    private float previousDistance = 0f;
 
 
     // Gesture Overrides

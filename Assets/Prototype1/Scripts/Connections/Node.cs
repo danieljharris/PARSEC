@@ -10,21 +10,21 @@ public class Node : MonoBehaviour
 
     public HashSet<ConnectionGroup> connectionGroups { get; set; } = new HashSet<ConnectionGroup>(new ReferenceEqualityComparer<ConnectionGroup>());
 
-    public bool HasTarget(Node target)
-    {
-        return edges.Exists(edge => ReferenceEquals(edge.target, target));
-    }
+    public bool HasTarget(Node target) => edges.Exists(edge => ReferenceEquals(edge.target, target));
     public void AddEdge(Edge newEdge) => edges.Add(newEdge);
 
-    public void Highlight(Color color, int colorID)
+    public void Highlight(Color color)
     {
         if (highlighted) return;
         highlighted = true;
         currentHighlightColor = color;
 
-        cakeslice.Outline outline = GetComponentInChildren<cakeslice.Outline>();
-        outline.eraseRenderer = false;
-        outline.color = colorID;
+        GameObject applyHighlightTo = transform.Find("Visuals").gameObject;
+        Outline outline = applyHighlightTo.GetOrAddComponent<Outline>();
+
+        outline.OutlineMode = Outline.Mode.OutlineAll;
+        outline.OutlineColor = color;
+        outline.OutlineWidth = 5f;
 
         for (int i = 0; i < edges.Count; i++)
         {
@@ -41,11 +41,14 @@ public class Node : MonoBehaviour
     {
         if (!highlighted) return;
         if (currentHighlightColor != color) return;
-        currentHighlightColor = Color.clear;
-        highlighted = false;
+        
+        GameObject applyHighlightTo = transform.Find("Visuals").gameObject;
+        Outline outline = applyHighlightTo.GetComponent<Outline>();
+        if (outline == null) return;
 
-        cakeslice.Outline outline = GetComponentInChildren<cakeslice.Outline>();
-        outline.eraseRenderer = true;
+        currentHighlightColor = Color.clear;
+        Destroy(outline);
+        highlighted = false;
 
         foreach (Edge edge in edges)
         {
