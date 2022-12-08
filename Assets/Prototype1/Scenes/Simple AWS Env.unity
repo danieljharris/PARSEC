@@ -165,6 +165,7 @@ GameObject:
   - component: {fileID: 133186815}
   - component: {fileID: 133186818}
   - component: {fileID: 133186819}
+  - component: {fileID: 133186820}
   m_Layer: 0
   m_Name: EC2
   m_TagString: Untagged
@@ -225,6 +226,20 @@ MonoBehaviour:
 
     -
     Web Server - Apache'
+--- !u!114 &133186820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133186814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 634f7fe11f3ec584e916d37f2493682d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  software: 000000001100000004000000
+  hardware: 00000000
 --- !u!1001 &133750128
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -320,6 +335,7 @@ GameObject:
   - component: {fileID: 165429606}
   - component: {fileID: 165429608}
   - component: {fileID: 165429609}
+  - component: {fileID: 165429610}
   m_Layer: 0
   m_Name: ACL
   m_TagString: Untagged
@@ -379,6 +395,20 @@ MonoBehaviour:
     - DynamoDB
 
     - ACL - Public Subnet'
+--- !u!114 &165429610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165429605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 634f7fe11f3ec584e916d37f2493682d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  software: 03000000
+  hardware: 05000000
 --- !u!1001 &180973459
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -458,6 +488,7 @@ GameObject:
   - component: {fileID: 198269730}
   - component: {fileID: 198269727}
   - component: {fileID: 198269731}
+  - component: {fileID: 198269732}
   m_Layer: 0
   m_Name: DynamoDB
   m_TagString: Untagged
@@ -518,6 +549,20 @@ MonoBehaviour:
 
     -
     NoSQL Database'
+--- !u!114 &198269732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198269726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 634f7fe11f3ec584e916d37f2493682d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  software: 08000000
+  hardware: 00000000
 --- !u!1001 &266231040
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1566,6 +1611,7 @@ GameObject:
   - component: {fileID: 663685389}
   - component: {fileID: 663685391}
   - component: {fileID: 663685392}
+  - component: {fileID: 663685393}
   m_Layer: 0
   m_Name: NAT Gateway
   m_TagString: Untagged
@@ -1623,6 +1669,20 @@ MonoBehaviour:
     Instance
 
     - ACL - Public Subnet'
+--- !u!114 &663685393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663685388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 634f7fe11f3ec584e916d37f2493682d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  software: 04000000
+  hardware: 04000000
 --- !u!1001 &710261140
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2814,6 +2874,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62fb5080b0026114e85b2fea1f9e1eda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1009442900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009442884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 634f7fe11f3ec584e916d37f2493682d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  software: 03000000
+  hardware: 05000000
 --- !u!1001 &1010313291
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2897,6 +2971,7 @@ GameObject:
   - component: {fileID: 1066194336}
   - component: {fileID: 1066194339}
   - component: {fileID: 1066194340}
+  - component: {fileID: 1066194341}
   m_Layer: 0
   m_Name: EC2
   m_TagString: Untagged
@@ -2957,6 +3032,20 @@ MonoBehaviour:
 
     -
     Authentication Server'
+--- !u!114 &1066194341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066194335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 634f7fe11f3ec584e916d37f2493682d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  software: 000000001300000010000000
+  hardware: 01000000
 --- !u!1 &1078755664
 GameObject:
   m_ObjectHideFlags: 0
@@ -2968,6 +3057,7 @@ GameObject:
   - component: {fileID: 1078755665}
   - component: {fileID: 1078755667}
   - component: {fileID: 1078755668}
+  - component: {fileID: 1078755669}
   m_Layer: 0
   m_Name: Internet Gateway
   m_TagString: Untagged
@@ -3022,6 +3112,20 @@ MonoBehaviour:
     Connections:
 
     - ACL - Public Subnet'
+--- !u!114 &1078755669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078755664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 634f7fe11f3ec584e916d37f2493682d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  software: 03000000
+  hardware: 05000000
 --- !u!1001 &1099764456
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5292,6 +5396,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1741689484}
+  - component: {fileID: 1741689485}
   m_Layer: 0
   m_Name: Network
   m_TagString: Untagged
@@ -5321,6 +5426,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1741689485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741689483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 016a1d587d86c684aa5943b769360bd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeSpecs:
+  - {fileID: 1078755669}
+  - {fileID: 2018068146}
+  - {fileID: 663685393}
+  - {fileID: 133186820}
+  - {fileID: 165429610}
+  - {fileID: 1066194341}
+  - {fileID: 198269732}
 --- !u!4 &1745684083 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1390912125830776597, guid: bf395407a1df60d4ebaad52cf81795fd, type: 3}
@@ -5653,6 +5778,7 @@ GameObject:
   - component: {fileID: 2018068142}
   - component: {fileID: 2018068144}
   - component: {fileID: 2018068145}
+  - component: {fileID: 2018068146}
   m_Layer: 0
   m_Name: ACL
   m_TagString: Untagged
@@ -5712,6 +5838,20 @@ MonoBehaviour:
     - ACL - Private Subnet
 
     - NAT Gateway'
+--- !u!114 &2018068146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018068141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 634f7fe11f3ec584e916d37f2493682d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  software: 03000000
+  hardware: 05000000
 --- !u!4 &2046814865 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2857845961663347754, guid: 702caa48c730e92469a1c5144fd8ed46, type: 3}
