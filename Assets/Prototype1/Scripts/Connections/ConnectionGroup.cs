@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Fusion;
 
 public class ConnectionGroup : MonoBehaviour
 {
@@ -105,6 +106,19 @@ public class ConnectionGroup : MonoBehaviour
             node.Highlight(color);
     }
     public void UnHighlight(Color color)
+    {
+        foreach (Node node in nodes)
+            node.UnHighlight(color);
+    }
+
+    [Rpc(RpcSources.All, RpcTargets.All, InvokeLocal = true)]
+    public void RPC_Highlight(Color color)
+    {
+        foreach (Node node in nodes)
+            node.Highlight(color);
+    }
+    [Rpc(RpcSources.All, RpcTargets.All, InvokeLocal = true)]
+    public void RPC_UnHighlight(Color color)
     {
         foreach (Node node in nodes)
             node.UnHighlight(color);

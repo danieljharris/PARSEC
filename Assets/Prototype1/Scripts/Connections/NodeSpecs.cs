@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using Fusion;
 
 public class NodeSpecs : MonoBehaviour
 {
@@ -8,6 +9,11 @@ public class NodeSpecs : MonoBehaviour
 
     public void Highlight(Color color) => GetComponent<Node>().Highlight(color);
     public void UnHighlight(Color color) => GetComponent<Node>().UnHighlight(color);
+
+    [Rpc(RpcSources.All, RpcTargets.All, InvokeLocal = true)]
+    public void RPC_Highlight(Color color) => GetComponent<Node>().Highlight(color);
+    [Rpc(RpcSources.All, RpcTargets.All, InvokeLocal = true)]
+    public void RPC_UnHighlight(Color color) => GetComponent<Node>().UnHighlight(color);
 }
 
 public enum Software {
