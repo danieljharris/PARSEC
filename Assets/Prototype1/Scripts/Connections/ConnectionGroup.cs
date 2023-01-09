@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Fusion;
 
 public class ConnectionGroup : MonoBehaviour
 {
@@ -42,12 +43,10 @@ public class ConnectionGroup : MonoBehaviour
 
     private (Node source, Node target) CreateNodes(GameObject source, GameObject target)
     {
-        Node sourceNode = source.GetComponent<Node>();
-        if (sourceNode == null) sourceNode = source.AddComponent<Node>();
+        Node sourceNode = source.GetOrAddComponent<Node>();
         sourceNode.connectionGroups.Add(this);
 
-        Node targetNode = target.GetComponent<Node>();
-        if (targetNode == null) targetNode = target.AddComponent<Node>();
+        Node targetNode = target.GetOrAddComponent<Node>();
         targetNode.connectionGroups.Add(this);
 
         return (sourceNode, targetNode);
@@ -101,12 +100,25 @@ public class ConnectionGroup : MonoBehaviour
         line.SetPosition(1, center2 += (-direction * offset2));
     }
 
-    public void Highlight(Color color, int colorID)
+    public void Highlight(Color color)
     {
         foreach (Node node in nodes)
-            node.Highlight(color, colorID);
+            node.Highlight(color);
     }
     public void UnHighlight(Color color)
+    {
+        foreach (Node node in nodes)
+            node.UnHighlight(color);
+    }
+
+    [Rpc(RpcSources.All, RpcTargets.All, InvokeLocal = true)]
+    public void RPC_Highlight(Color color)
+    {
+        foreach (Node node in nodes)
+            node.Highlight(color);
+    }
+    [Rpc(RpcSources.All, RpcTargets.All, InvokeLocal = true)]
+    public void RPC_UnHighlight(Color color)
     {
         foreach (Node node in nodes)
             node.UnHighlight(color);

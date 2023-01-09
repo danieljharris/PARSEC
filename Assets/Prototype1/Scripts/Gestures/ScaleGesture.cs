@@ -1,5 +1,6 @@
 using Zinnia.Action;
 using UnityEngine;
+using static Utility;
 
 public class ScaleGesture : Gesture
 {
@@ -20,6 +21,10 @@ public class ScaleGesture : Gesture
     public override void ApplyGesture()
     {
         Vector3 newScale = CalculateScale();
+
+        // Set min bounds for scaling
+        if (newScale.x < 0.1f) return;
+
         Vector3 newPosition = CalculatePosition(newScale);
 
         Avatar.localScale = newScale;
@@ -29,12 +34,19 @@ public class ScaleGesture : Gesture
 
     // Scale Calculations
     private float ControllerSpreadDistance() =>
-        Vector3.Distance(LController.position, RController.position);
+        Vector3.Distance(LController.localPosition, RController.localPosition);
     private Vector3 CalculateScale()
     {
-        float scaleMultiplier = 2;
+        /* 
+        New Scale = Previous Scale of User
+                    + ((Starting Distance between Controllers
+                    - Current Distance Between Controllers) * Scale Multiplier)
+        */
 
-        float distanceMoved = InitialDistance - ControllerSpreadDistance();
+        float scaleMultiplier = Avatar.localScale.x;
+
+        float currentDistance = ControllerSpreadDistance();
+        float distanceMoved = InitialDistance - currentDistance;
         float scaleFactor = distanceMoved * scaleMultiplier;
 
         Vector3 scaleFactorVector = Vector3.one * scaleFactor;
@@ -53,13 +65,6 @@ public class ScaleGesture : Gesture
 
         Vector3 newPosition = ScaleAround(Avatar, pivot, newScale.x);
 
-        return newPosition;
-    }
-    public Vector3 ScaleAround(Transform target, Vector3 pivot, float newScaleX)
-    {
-        Vector3 difference = target.localPosition - pivot;
-        float relativeScale = newScaleX / target.localScale.x;
-        Vector3 newPosition = pivot + difference * relativeScale;
         return newPosition;
     }
 }
