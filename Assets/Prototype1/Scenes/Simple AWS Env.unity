@@ -2451,6 +2451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd95f68eae033840a5ffbbff69f2e99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPresenter: 0
   color: {r: 0.21960786, g: 0.8196079, b: 0.8235295, a: 1}
 --- !u!1 &903720913
 GameObject:
@@ -6909,7 +6910,7 @@ GameObject:
   - component: {fileID: 1741689485}
   m_Layer: 0
   m_Name: Network
-  m_TagString: Untagged
+  m_TagString: Network
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6949,6 +6950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 016a1d587d86c684aa5943b769360bd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPresenter: 0
   nodeSpecs:
   - {fileID: 1078755669}
   - {fileID: 2018068146}
@@ -6991,6 +6993,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd95f68eae033840a5ffbbff69f2e99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPresenter: 0
   color: {r: 0.909804, g: 0.64705884, b: 0.121568635, a: 1}
 --- !u!1 &1772795688
 GameObject:
