@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class DependencyHighlightSoftware : MonoBehaviour
+public class DependencyHighlightHardware : MonoBehaviour
 {
-    public Software software;
+    public Hardware hardware;
 
     NodeList nodeList;
     void Start()
@@ -11,6 +11,6 @@ public class DependencyHighlightSoftware : MonoBehaviour
         if (nodeList == null) Debug.Log("Network/NodeList not found");
     }
 
-    public void addFilter() => nodeList.addFilter(software);
-    public void removeFilter() => nodeList.removeFilter(software);
+    public void addFilter() => nodeList.addFilter(hardware);
+    public void removeFilter() => nodeList.removeFilter(hardware);
 }
