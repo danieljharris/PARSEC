@@ -19,36 +19,33 @@ public class NodeSpecs : MonoBehaviour
 public enum Software {
     Linux,
     Windows,
-    Mac,
+    // Mac,
     CiscoIOS,
-    IBMNetworkingOS,
+    // IBMNetworkingOS,
 
     Nginx,
-    Apache,
+    // Apache,
     
     MySQL,
-    PostgreSQL,
-    MongoDB,
-    DynamoDB,
+    // PostgreSQL,
+    // MongoDB,
+    // DynamoDB,
 
-    PHP,
-    Python,
-    NodeJS,
+    // PHP,
+    // Python,
+    // NodeJS,
     Java,
-    CSharp,
-    CPlusPlus,
-    Go,
-    Rust,
+    // CSharp,
+    // CPlusPlus,
+    // Go,
+    // Rust,
 
-    Docker,
-    Kubernetes,
+    // Docker,
+    // Kubernetes,
 
-    Ubuntu,
-    CentOS,
-
-    Vim,
-    Emacs,
-    Nano,
+    // Ubuntu,
+    // CentOS,
+    // Debian,
 }
 
 public enum Hardware {
