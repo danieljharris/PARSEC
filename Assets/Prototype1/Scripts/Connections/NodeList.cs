@@ -10,23 +10,19 @@ public class NodeList : MonoBehaviour
     public Color filterColor = Color.red;
     private List<Software> softwareFilters = new List<Software>();
     private List<Hardware> hardwareFilters = new List<Hardware>();
+    private List<AttackType> attackTypeFilters = new List<AttackType>();
 
     private int filterCount()
     {
-        return softwareFilters.Count + hardwareFilters.Count;
+        return softwareFilters.Count + hardwareFilters.Count + attackTypeFilters.Count;
     }
 
-    private bool hasSpecs(NodeSpecs specs, List<Software> softwareFilters, List<Hardware> hardwareFilters)
-    {
-        return softwareFilters.All(specs.software.Contains) &&
-               hardwareFilters.All(specs.hardware.Contains); 
-    }
     private void applyFilter()
     {
         if (isPresenter)
         {
             foreach (NodeSpecs specs in nodeSpecs)
-                if(hasSpecs(specs, softwareFilters, hardwareFilters))
+                if(specs.ContainsWare(softwareFilters, hardwareFilters))
                     specs.RPC_Highlight(filterColor);
                 else
                     specs.RPC_UnHighlight(filterColor);
@@ -34,7 +30,7 @@ public class NodeList : MonoBehaviour
         else
         {
             foreach (NodeSpecs specs in nodeSpecs)
-                if(hasSpecs(specs, softwareFilters, hardwareFilters))
+                if(specs.ContainsWare(softwareFilters, hardwareFilters))
                     specs.Highlight(filterColor);
                 else
                     specs.UnHighlight(filterColor);
@@ -79,6 +75,21 @@ public class NodeList : MonoBehaviour
     public void removeFilter(Hardware hardware)
     {
         hardwareFilters.Remove(hardware);
+
+        if(filterCount() != 0) applyFilter();
+        else clearFilterHighlighting();
+    }
+
+    // AttackTypes
+    public void addFilter(AttackType attackTypes)
+    {
+        attackTypeFilters.Add(attackTypes);
+
+        applyFilter();
+    }
+    public void removeFilter(AttackType attackTypes)
+    {
+        attackTypeFilters.Remove(attackTypes);
 
         if(filterCount() != 0) applyFilter();
         else clearFilterHighlighting();

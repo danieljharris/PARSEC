@@ -478,8 +478,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 634f7fe11f3ec584e916d37f2493682d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  software: 0100000005000000
-  hardware: 00000000
 --- !u!1001 &133750128
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -647,8 +645,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 634f7fe11f3ec584e916d37f2493682d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  software: 02000000
-  hardware: 05000000
 --- !u!1001 &180973459
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -806,8 +802,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 634f7fe11f3ec584e916d37f2493682d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  software: 04000000
-  hardware: 00000000
 --- !u!1001 &266231040
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2201,8 +2195,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 634f7fe11f3ec584e916d37f2493682d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  software: 0000000005000000
-  hardware: 03000000
 --- !u!1001 &661394583
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2356,8 +2348,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 634f7fe11f3ec584e916d37f2493682d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  software: 00000000
-  hardware: 04000000
 --- !u!1001 &694216072
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3770,8 +3760,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 634f7fe11f3ec584e916d37f2493682d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  software: 01000000
-  hardware: 0200000001000000
 --- !u!65 &938736177
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4352,8 +4340,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 634f7fe11f3ec584e916d37f2493682d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  software: 03000000
-  hardware: 05000000
 --- !u!1001 &1010313291
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4593,8 +4579,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 634f7fe11f3ec584e916d37f2493682d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  software: 0000000003000000
-  hardware: 01000000
 --- !u!1001 &1071974423
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4949,8 +4933,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 634f7fe11f3ec584e916d37f2493682d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  software: 02000000
-  hardware: 05000000
 --- !u!1001 &1099764456
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9492,8 +9474,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 634f7fe11f3ec584e916d37f2493682d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  software: 02000000
-  hardware: 05000000
 --- !u!4 &2046814865 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2857845961663347754, guid: 702caa48c730e92469a1c5144fd8ed46, type: 3}
