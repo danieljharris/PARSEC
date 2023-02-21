@@ -10,8 +10,6 @@ namespace System.Runtime.CompilerServices { internal static class IsExternalInit
 
 public class NodeSpecs : MonoBehaviour
 {
-    private static int NumberOfAttackTypes = 11;
-
     public List<Software>   software    = new List<Software>();
     public List<Hardware>   hardware    = new List<Hardware>();
     public List<DataSource> dataSources = new List<DataSource>();

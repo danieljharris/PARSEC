@@ -4,7 +4,7 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 
-public class ListAttackTypes : MonoBehaviour
+public class ListAttacksDetectable : MonoBehaviour
 {
     public TextMeshPro text;
     public NodeSpecs nodeSpecs;
