@@ -91,7 +91,7 @@ public class NodeSpecs : MonoBehaviour
             ThreatProtectionApplicationsAttackTypes
         };
 
-    NodeSpecs()
+    void Start()
     {
         // Fills list of attack type detectability from the data sources that are used
         // E.g. if NetworkLogs and Geolocation are used, then the list will be

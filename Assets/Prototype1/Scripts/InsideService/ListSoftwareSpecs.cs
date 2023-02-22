@@ -8,6 +8,6 @@ public class ListSoftwareSpecs : MonoBehaviour
     void Start()
     {
         foreach (Software software in nodeSpecs.software)
-            text.text += software.ToString() + "\n";
+            text.text += "- " + software.ToString() + "\n";
     }
 }

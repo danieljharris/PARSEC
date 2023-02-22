@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -10,6 +11,18 @@ public class ListAttacksDetectable : MonoBehaviour
     public NodeSpecs nodeSpecs;
     void Start()
     {
+        // Wait for the NodeSpecs to be initialized
+        StartCoroutine(LateStart(0.5f));
+    }
+
+    IEnumerator LateStart(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        CreateListOfAttacksDetectable();
+    }
+
+    void CreateListOfAttacksDetectable()
+    {
         // Get all the names of the AttackType enum
         List<string> attackTypes = Enum.GetNames(typeof(AttackType)).ToList();
 
@@ -18,7 +31,10 @@ public class ListAttacksDetectable : MonoBehaviour
             string AttackType = attackTypes[i];
             string detectability = nodeSpecs.AttackTypeDetectability[i].ToString();
 
-            text.text += AttackType + ": " + detectability + "\n";
+            // Add space before capital letters
+            AttackType = string.Concat(AttackType.Select(x => Char.IsUpper(x) ? " " + x : x.ToString())).TrimStart(' ');
+            
+            text.text += "- " + AttackType + ": " + detectability + "\n";
         }
     }
 }

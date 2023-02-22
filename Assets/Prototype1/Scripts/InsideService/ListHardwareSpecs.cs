@@ -8,6 +8,6 @@ public class ListHardwareSpecs : MonoBehaviour
     void Start()
     {
         foreach (Hardware hardware in nodeSpecs.hardware)
-            text.text += hardware.ToString() + "\n";
+            text.text += "- " + hardware.ToString() + "\n";
     }
 }
