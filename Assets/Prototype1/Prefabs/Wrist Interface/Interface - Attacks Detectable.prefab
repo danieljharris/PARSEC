@@ -7313,7 +7313,7 @@ MonoBehaviour:
     buttonText: Back
     fontSize: 3.5
     fontColor: {r: 0, g: 0, b: 0, a: 1}
-    meshColor: {r: 0.7232704, g: 0.8536011, b: 1, a: 1}
+    meshColor: {r: 0.8509804, g: 0.85882354, b: 0.8509804, a: 1}
     container:
       linkedObject: {fileID: 545012421323276631}
       linkText: View Enabled Hover Container

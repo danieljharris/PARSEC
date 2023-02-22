@@ -3500,7 +3500,7 @@ MonoBehaviour:
     buttonText: Settings
     fontSize: 3.5
     fontColor: {r: 0, g: 0, b: 0, a: 1}
-    meshColor: {r: 0.7232704, g: 0.8536011, b: 1, a: 1}
+    meshColor: {r: 0.8509804, g: 0.85882354, b: 0.8509804, a: 1}
     container:
       linkedObject: {fileID: 545012421323276631}
       linkText: View Enabled Hover Container
@@ -8984,15 +8984,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6020726910918489074, guid: 71cacef91e7957d488f19d862c52040f, type: 3}
       propertyPath: enabledHover.meshColor.b
-      value: 1
+      value: 0.8509804
       objectReference: {fileID: 0}
     - target: {fileID: 6020726910918489074, guid: 71cacef91e7957d488f19d862c52040f, type: 3}
       propertyPath: enabledHover.meshColor.g
-      value: 0.8536011
+      value: 0.85882354
       objectReference: {fileID: 0}
     - target: {fileID: 6020726910918489074, guid: 71cacef91e7957d488f19d862c52040f, type: 3}
       propertyPath: enabledHover.meshColor.r
-      value: 0.7232704
+      value: 0.8509804
       objectReference: {fileID: 0}
     - target: {fileID: 6020726910918489074, guid: 71cacef91e7957d488f19d862c52040f, type: 3}
       propertyPath: enabledInactive.fontSize
@@ -9564,15 +9564,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6020726910918489074, guid: 71cacef91e7957d488f19d862c52040f, type: 3}
       propertyPath: enabledHover.meshColor.b
-      value: 1
+      value: 0.8509804
       objectReference: {fileID: 0}
     - target: {fileID: 6020726910918489074, guid: 71cacef91e7957d488f19d862c52040f, type: 3}
       propertyPath: enabledHover.meshColor.g
-      value: 0.8536011
+      value: 0.85882354
       objectReference: {fileID: 0}
     - target: {fileID: 6020726910918489074, guid: 71cacef91e7957d488f19d862c52040f, type: 3}
       propertyPath: enabledHover.meshColor.r
-      value: 0.7232704
+      value: 0.8509804
       objectReference: {fileID: 0}
     - target: {fileID: 6020726910918489074, guid: 71cacef91e7957d488f19d862c52040f, type: 3}
       propertyPath: enabledInactive.fontSize
