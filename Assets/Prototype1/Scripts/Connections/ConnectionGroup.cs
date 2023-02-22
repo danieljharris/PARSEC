@@ -15,6 +15,8 @@ public class ConnectionGroup : MonoBehaviour
     public LineRenderer linePrefab;
     public ConnectionInfo[] connections;
 
+    private float connectionLineOffset = 1.8f;
+
     private HashSet<Node> nodes = new HashSet<Node>(new ReferenceEqualityComparer<Node>());
     private List<(GameObject, GameObject, LineRenderer)> nodePairs = new List<(GameObject, GameObject, LineRenderer)>();
 
@@ -91,8 +93,8 @@ public class ConnectionGroup : MonoBehaviour
 
         float average(Vector3 vec) => (vec.x + vec.y + vec.z) / 3;
 
-        float offset = average(rend.bounds.size) / 4;
-        float offset2 = average(rend2.bounds.size) / 4;
+        float offset = average(rend.bounds.size) / connectionLineOffset;
+        float offset2 = average(rend2.bounds.size) / connectionLineOffset;
 
         // Set the start and end points of the line
         //  with offset from the center of the collider
