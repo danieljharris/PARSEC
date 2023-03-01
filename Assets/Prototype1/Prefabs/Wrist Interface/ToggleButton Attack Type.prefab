@@ -230,7 +230,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1509081170941852940}
-  - component: {fileID: 2830704810337756960}
+  - component: {fileID: 6505438369170382396}
   - component: {fileID: 1509081170941852939}
   m_Layer: 0
   m_Name: ToggleButton Attack Type
@@ -255,7 +255,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &2830704810337756960
+--- !u!114 &6505438369170382396
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -264,9 +264,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1509081170941852938}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aaf7db2abd6f6f746b4a753390cc509e, type: 3}
+  m_Script: {fileID: 11500000, guid: 4777e9e301ad2d147b45f1e6511c377b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   attackType: 0
 --- !u!114 &1509081170941852939
 MonoBehaviour:
@@ -335,8 +336,8 @@ MonoBehaviour:
   Activated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2830704810337756960}
-        m_TargetAssemblyTypeName: DependencyHighlightAttackType, Assembly-CSharp
+      - m_Target: {fileID: 6505438369170382396}
+        m_TargetAssemblyTypeName: HighlightAttackType, Assembly-CSharp
         m_MethodName: addFilter
         m_Mode: 1
         m_Arguments:
@@ -350,8 +351,8 @@ MonoBehaviour:
   Deactivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2830704810337756960}
-        m_TargetAssemblyTypeName: DependencyHighlightAttackType, Assembly-CSharp
+      - m_Target: {fileID: 6505438369170382396}
+        m_TargetAssemblyTypeName: HighlightAttackType, Assembly-CSharp
         m_MethodName: removeFilter
         m_Mode: 1
         m_Arguments:

@@ -2202,7 +2202,7 @@ PrefabInstance:
       objectReference: {fileID: 1912014509141183585, guid: 1326e052bd0f4c5418cba7a4122f1fd8, type: 3}
     - target: {fileID: 1328261037738135421, guid: 3bb36be9ee9cc664d9a5644921fa146f, type: 3}
       propertyPath: _SessionName
-      value: Computer Objects
+      value: CAPS
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bb36be9ee9cc664d9a5644921fa146f, type: 3}
@@ -6970,7 +6970,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 016a1d587d86c684aa5943b769360bd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPresenter: 0
   nodeSpecs:
   - {fileID: 1078755669}
   - {fileID: 2018068146}

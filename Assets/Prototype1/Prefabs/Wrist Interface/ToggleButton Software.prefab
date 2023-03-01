@@ -230,7 +230,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1509081170941852940}
-  - component: {fileID: 868351600497676466}
+  - component: {fileID: 7266716649024732074}
   - component: {fileID: 1509081170941852939}
   m_Layer: 0
   m_Name: ToggleButton Software
@@ -255,7 +255,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &868351600497676466
+--- !u!114 &7266716649024732074
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -264,7 +264,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1509081170941852938}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac812662277ea9348bce8667d3f65cd4, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c015a3fc2dd32149b21c3aeb1c55e40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   software: 0
@@ -335,8 +335,8 @@ MonoBehaviour:
   Activated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 868351600497676466}
-        m_TargetAssemblyTypeName: DependencyHighlightSoftware, Assembly-CSharp
+      - m_Target: {fileID: 7266716649024732074}
+        m_TargetAssemblyTypeName: HighlightSoftware, Assembly-CSharp
         m_MethodName: addFilter
         m_Mode: 1
         m_Arguments:
@@ -350,8 +350,8 @@ MonoBehaviour:
   Deactivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 868351600497676466}
-        m_TargetAssemblyTypeName: DependencyHighlightSoftware, Assembly-CSharp
+      - m_Target: {fileID: 7266716649024732074}
+        m_TargetAssemblyTypeName: HighlightSoftware, Assembly-CSharp
         m_MethodName: removeFilter
         m_Mode: 1
         m_Arguments:

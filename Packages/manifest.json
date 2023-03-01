@@ -9,6 +9,7 @@
     }
   ],
   "dependencies": {
+    "com.ogxd.project-curator": "https://github.com/ogxd/project-curator.git",
     "com.unity.ide.vscode": "1.2.5",
     "com.unity.nuget.mono-cecil": "1.10.2",
     "com.unity.textmeshpro": "3.0.6",

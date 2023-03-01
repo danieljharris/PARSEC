@@ -1,10 +1,8 @@
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class NodeList : MonoBehaviour
 {
-    public bool isPresenter = false;
     public List<NodeSpecs> nodeSpecs = new List<NodeSpecs>();
 
     public Color filterColor = Color.red;
@@ -17,7 +15,7 @@ public class NodeList : MonoBehaviour
         return softwareFilters.Count + hardwareFilters.Count + attackTypeFilters.Count;
     }
 
-    private void applyFilter()
+    private void applyFilter(bool isPresenter)
     {
         if (isPresenter)
         {
@@ -36,7 +34,7 @@ public class NodeList : MonoBehaviour
                     specs.UnHighlight(filterColor);
         }
     }
-    private void clearFilterHighlighting()
+    private void clearFilterHighlighting(bool isPresenter)
     {
         if (isPresenter)
         {
@@ -51,47 +49,47 @@ public class NodeList : MonoBehaviour
     }
 
     // Software
-    public void addFilter(Software software)
+    public void addFilter(Software software, bool isPresenter)
     {
         softwareFilters.Add(software);
 
-        applyFilter();
+        applyFilter(isPresenter);
     }
-    public void removeFilter(Software software)
+    public void removeFilter(Software software, bool isPresenter)
     {
         softwareFilters.Remove(software);
 
-        if(filterCount() != 0) applyFilter();
-        else clearFilterHighlighting();
+        if(filterCount() != 0) applyFilter(isPresenter);
+        else clearFilterHighlighting(isPresenter);
     }
 
     // Hardware
-    public void addFilter(Hardware hardware)
+    public void addFilter(Hardware hardware, bool isPresenter)
     {
         hardwareFilters.Add(hardware);
 
-        applyFilter();
+        applyFilter(isPresenter);
     }
-    public void removeFilter(Hardware hardware)
+    public void removeFilter(Hardware hardware, bool isPresenter)
     {
         hardwareFilters.Remove(hardware);
 
-        if(filterCount() != 0) applyFilter();
-        else clearFilterHighlighting();
+        if(filterCount() != 0) applyFilter(isPresenter);
+        else clearFilterHighlighting(isPresenter);
     }
 
     // AttackTypes
-    public void addFilter(AttackType attackTypes)
+    public void addFilter(AttackType attackTypes, bool isPresenter)
     {
         attackTypeFilters.Add(attackTypes);
 
-        applyFilter();
+        applyFilter(isPresenter);
     }
-    public void removeFilter(AttackType attackTypes)
+    public void removeFilter(AttackType attackTypes, bool isPresenter)
     {
         attackTypeFilters.Remove(attackTypes);
 
-        if(filterCount() != 0) applyFilter();
-        else clearFilterHighlighting();
+        if(filterCount() != 0) applyFilter(isPresenter);
+        else clearFilterHighlighting(isPresenter);
     }
 }
