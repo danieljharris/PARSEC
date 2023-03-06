@@ -4,7 +4,7 @@ public abstract class MenuHighlighting : MonoBehaviour
 {
     [SerializeField] protected Presenter presenter;
     protected NodeList nodeList;
-
+    
     void Start()
     {
         nodeList = GameObject.FindWithTag("Network")?.GetComponent<NodeList>();

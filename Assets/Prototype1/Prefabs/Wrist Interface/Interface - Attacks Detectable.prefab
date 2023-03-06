@@ -13157,6 +13157,8 @@ MonoBehaviour:
   - {fileID: 5750248191242820158}
   - {fileID: 8119346119511288922}
   - {fileID: 6645191214439562801}
+  presenter: {fileID: 0}
+  resetType: 1
 --- !u!114 &2553576603968397463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15220,12 +15222,24 @@ PrefabInstance:
       value: Physical Attacks
       objectReference: {fileID: 0}
     - target: {fileID: 1509081170941852939, guid: 9f5424d08d3d17b4eb3212140eced7e1, type: 3}
+      propertyPath: Activated.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509081170941852939, guid: 9f5424d08d3d17b4eb3212140eced7e1, type: 3}
+      propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509081170941852939, guid: 9f5424d08d3d17b4eb3212140eced7e1, type: 3}
       propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2373869084910064094}
     - target: {fileID: 1509081170941852939, guid: 9f5424d08d3d17b4eb3212140eced7e1, type: 3}
       propertyPath: Deactivated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 2373869084910064094}
+    - target: {fileID: 1509081170941852939, guid: 9f5424d08d3d17b4eb3212140eced7e1, type: 3}
+      propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1509081170941852939, guid: 9f5424d08d3d17b4eb3212140eced7e1, type: 3}
       propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -15237,11 +15251,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1509081170941852939, guid: 9f5424d08d3d17b4eb3212140eced7e1, type: 3}
       propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: HighlightAttackType, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509081170941852939, guid: 9f5424d08d3d17b4eb3212140eced7e1, type: 3}
+      propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: DependencyHighlightAttackType, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1509081170941852939, guid: 9f5424d08d3d17b4eb3212140eced7e1, type: 3}
       propertyPath: Deactivated.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: DependencyHighlightAttackType, Assembly-CSharp
+      value: HighlightAttackType, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1509081170941852940, guid: 9f5424d08d3d17b4eb3212140eced7e1, type: 3}
       propertyPath: m_RootOrder
@@ -15289,6 +15307,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5424d08d3d17b4eb3212140eced7e1, type: 3}
+--- !u!114 &2373869084910064094 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6505438369170382396, guid: 9f5424d08d3d17b4eb3212140eced7e1, type: 3}
+  m_PrefabInstance: {fileID: 8842352638621143010}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4777e9e301ad2d147b45f1e6511c377b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7946335134682739438 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1509081170941852940, guid: 9f5424d08d3d17b4eb3212140eced7e1, type: 3}

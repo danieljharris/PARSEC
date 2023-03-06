@@ -6980,7 +6980,13 @@ MonoBehaviour:
   - {fileID: 198269732}
   - {fileID: 652905494}
   - {fileID: 938736176}
-  filterColor: {r: 1, g: 0, b: 0, a: 1}
+  filterColor: {r: 1, g: 1, b: 1, a: 1}
+  softwareFilters: 
+  hardwareFilters: 
+  attackTypeFilters: 
+  WareReset: {fileID: 0}
+  AttackReset: {fileID: 0}
+  highlightType: 0
 --- !u!4 &1745684083 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1390912125830776597, guid: bf395407a1df60d4ebaad52cf81795fd, type: 3}

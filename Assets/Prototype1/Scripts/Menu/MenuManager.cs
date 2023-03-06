@@ -1,17 +1,26 @@
+using System.Collections.Generic;
 using Zinnia.Action;
 using UnityEngine;
 
 public class MenuManager : MonoBehaviour
 {
-    [SerializeField] BooleanAction MenuButton;
-    [SerializeField] Menu MainMenu;
-    [SerializeField] protected Presenter presenter;
+    [SerializeField] private BooleanAction MenuButton;
+    [SerializeField] private Menu MainMenu;
+    [SerializeField] private List<Menu> menus;
+    [SerializeField] private Presenter presenter;
     private Menu CurrentMenu;
     private bool MenuShown = false;
     private bool MenuButtonHeld = false;
     private bool MenuDisabled = false;
 
-    void Start() => presenter.onPresenterChanged += OnPresenterChanged;
+    void Start()
+    {
+        presenter.onPresenterChanged += OnPresenterChanged;
+
+        foreach (Menu menu in menus)
+            menu.transform.localScale = Vector3.zero;
+    }
+
     void Update()
     {
         if(MenuDisabled) return;
@@ -38,19 +47,19 @@ public class MenuManager : MonoBehaviour
     {
         MenuShown = true;
         CurrentMenu = menu;
-        CurrentMenu.gameObject.SetActive(true);
+        CurrentMenu.transform.localScale = new Vector3(0.400000006f, 0.400000006f, 0.00499999989f);
     }
     private void Hide()
     {
         if(!MenuShown) return;
         MenuShown = false;
-        CurrentMenu.gameObject.SetActive(false);
+        CurrentMenu.transform.localScale = Vector3.zero;
     }
     public void Switch(Menu newMenu)
     {
-        CurrentMenu.gameObject.SetActive(false);
+        CurrentMenu.transform.localScale = Vector3.zero;
         CurrentMenu = newMenu;
-        CurrentMenu.gameObject.SetActive(true);
+        CurrentMenu.transform.localScale = new Vector3(0.400000006f, 0.400000006f, 0.00499999989f);
     }
 
     public void OnPresenterChanged()
