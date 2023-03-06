@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class Highlighter : MonoBehaviour
 {
-    [SerializeField]
-    private bool isPresenter = false;
+    [SerializeField] private Presenter presenter;
     public Color color;
     private Node nodeInCollision = null;
 
@@ -20,7 +19,7 @@ public class Highlighter : MonoBehaviour
     }
     private void Highlight(Node node, Color color)
     {
-        if (isPresenter)
+        if (presenter.IsPresenter)
             foreach (ConnectionGroup conGroup in node.connectionGroups)
                 conGroup.RPC_Highlight(color);
         else
@@ -41,26 +40,11 @@ public class Highlighter : MonoBehaviour
     }
     private void UnHighlight(Node node, Color color)
     {
-        if (isPresenter)
+        if (presenter.IsPresenter)
             foreach (ConnectionGroup conGroup in node.connectionGroups)
                 conGroup.RPC_UnHighlight(color);
         else
             foreach (ConnectionGroup conGroup in node.connectionGroups)
                 conGroup.UnHighlight(color);
-    }
-
-    // Set the presenter status
-    public void SetPresenter(bool presenterStatus)
-    {
-        isPresenter = presenterStatus;
-
-        if(nodeInCollision == null) return;
-
-        if(isPresenter)
-            foreach (ConnectionGroup conGroup in nodeInCollision.connectionGroups)
-                conGroup.RPC_Highlight(color);
-        else
-            foreach (ConnectionGroup conGroup in nodeInCollision.connectionGroups)
-                conGroup.RPC_UnHighlight(color);
     }
 }

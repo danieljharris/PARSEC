@@ -11129,6 +11129,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1585156592039887634, guid: 5c6eb814cd5eac748866d1d016254ccf, type: 3}
+      propertyPath: presenter
+      value: 
+      objectReference: {fileID: 3059867748383223192}
     - target: {fileID: 1671099858033784620, guid: 5c6eb814cd5eac748866d1d016254ccf, type: 3}
       propertyPath: Flags
       value: 134145
@@ -11217,6 +11221,10 @@ PrefabInstance:
       propertyPath: NetworkGuid.RawGuidValue.Array.data[1]
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2641348031151098491, guid: 5c6eb814cd5eac748866d1d016254ccf, type: 3}
+      propertyPath: presenter
+      value: 
+      objectReference: {fileID: 3059867748383223192}
     - target: {fileID: 2857169809974050326, guid: 5c6eb814cd5eac748866d1d016254ccf, type: 3}
       propertyPath: presenter
       value: 
@@ -11409,6 +11417,10 @@ PrefabInstance:
       propertyPath: presenter
       value: 
       objectReference: {fileID: 3059867748383223192}
+    - target: {fileID: 6409780851322498682, guid: 5c6eb814cd5eac748866d1d016254ccf, type: 3}
+      propertyPath: presenter
+      value: 
+      objectReference: {fileID: 3059867748383223192}
     - target: {fileID: 6530319479992530908, guid: 5c6eb814cd5eac748866d1d016254ccf, type: 3}
       propertyPath: presenter
       value: 
@@ -11469,6 +11481,10 @@ PrefabInstance:
       propertyPath: MenuButton
       value: 
       objectReference: {fileID: 8509387965829109223}
+    - target: {fileID: 7270010024003620012, guid: 5c6eb814cd5eac748866d1d016254ccf, type: 3}
+      propertyPath: presenter
+      value: 
+      objectReference: {fileID: 3059867748383223192}
     - target: {fileID: 7329500664411563196, guid: 5c6eb814cd5eac748866d1d016254ccf, type: 3}
       propertyPath: Flags
       value: 134145
@@ -11517,6 +11533,10 @@ PrefabInstance:
       propertyPath: resetType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8437126865354233710, guid: 5c6eb814cd5eac748866d1d016254ccf, type: 3}
+      propertyPath: presenter
+      value: 
+      objectReference: {fileID: 3059867748383223192}
     - target: {fileID: 8443325595229124917, guid: 5c6eb814cd5eac748866d1d016254ccf, type: 3}
       propertyPath: Flags
       value: 3073

@@ -51,6 +51,6 @@ public class Presenter : NetworkBehaviour
     }
 
     [Networked(OnChanged = "OnPresenterChanged")] public NetworkBool IsPresenter { get; set; } = false;
-    public static void OnPresenterChanged(Changed<Presenter> changed) => changed.Behaviour.onPresenterChanged.Invoke();
-    public event UnityAction onPresenterChanged;
+    public static void OnPresenterChanged(Changed<Presenter> changed) => onPresenterChanged.Invoke();
+    public static event UnityAction onPresenterChanged;
 }

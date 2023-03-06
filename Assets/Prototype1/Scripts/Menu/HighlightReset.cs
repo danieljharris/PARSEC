@@ -6,12 +6,11 @@ using static HighlightType;
 public class HighlightReset : MonoBehaviour
 {
     public List<SpatialTargetFacade> filterButtons = new List<SpatialTargetFacade>();
-    [SerializeField] private Presenter presenter;
     [SerializeField] private HighlightType resetType;
 
     void Start()
     {
-        presenter.onPresenterChanged += removeAllFilters;
+        Presenter.onPresenterChanged += removeAllFilters;
 
         NodeList nodeList = GameObject.FindWithTag("Network")?.GetComponent<NodeList>();
         if (nodeList == null) Debug.Log("Network/NodeList not found");

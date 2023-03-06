@@ -15,7 +15,7 @@ public class MenuManager : MonoBehaviour
 
     void Start()
     {
-        presenter.onPresenterChanged += OnPresenterChanged;
+        Presenter.onPresenterChanged += OnPresenterChanged;
 
         foreach (Menu menu in menus)
             menu.transform.localScale = Vector3.zero;
