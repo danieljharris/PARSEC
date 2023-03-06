@@ -18,7 +18,7 @@ public class ResettableWand : MonoBehaviour
         OriginalRotation = transform.localRotation;
         OriginalScale = transform.localScale;
 
-        presenter.onPresenterChanged += WandReset;
+        Presenter.onPresenterChanged += WandReset;
     }
 
     public void WandReset()
