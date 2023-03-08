@@ -1,3 +1,4 @@
+using Fusion;
 using Tilia.Interactions.Interactables.Interactables;
 using UnityEngine;
 
@@ -7,6 +8,7 @@ public class ResettableWand : MonoBehaviour
     private Vector3 OriginalPosition;
     private Quaternion OriginalRotation;
     private Vector3 OriginalScale;
+    [SerializeField] private Presenter presenter;
 
     void Start()
     {
@@ -15,8 +17,17 @@ public class ResettableWand : MonoBehaviour
         OriginalPosition = transform.localPosition;
         OriginalRotation = transform.localRotation;
         OriginalScale = transform.localScale;
+
+        Presenter.onPresenterChanged += WandReset;
     }
+
     public void WandReset()
+    {
+        Local_WandReset();
+        if (presenter.IsPresenter) RPC_WandReset();
+    }
+
+    private void Local_WandReset()
     {
         InteractableFacade facade = GetComponent<InteractableFacade>();
         if (facade == null) return;
@@ -31,4 +42,7 @@ public class ResettableWand : MonoBehaviour
         if (pickup == null) return;
         pickup.AttachedToMenu = true;
     }
+
+    [Rpc(RpcSources.All, RpcTargets.All, InvokeLocal = false)]
+    private void RPC_WandReset() => Local_WandReset();
 }

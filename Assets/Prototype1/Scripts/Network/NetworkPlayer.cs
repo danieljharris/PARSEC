@@ -1,10 +1,12 @@
-using UnityEngine;
 using Fusion;
+using UnityEngine;
 
 public class NetworkPlayer : NetworkBehaviour, IPlayerLeft
 {
-    [SerializeField] GameObject[] _disableForLocalPlayer;
-    [SerializeField] GameObject[] _disableForNetworkPlayer;
+    // Disable game objects depending on current or network players
+    [SerializeField] private GameObject[] _disableForLocalPlayer;
+    [SerializeField] private GameObject[] _disableForNetworkPlayer;
+    [SerializeField] private MonoBehaviour[] _disableScriptsForNetworkPlayer;
 
     public override void Spawned()
     {
@@ -17,6 +19,7 @@ public class NetworkPlayer : NetworkBehaviour, IPlayerLeft
         {
             // Spawned as other player rig
             foreach (GameObject go in _disableForNetworkPlayer) go.SetActive(false);
+            foreach (MonoBehaviour mb in _disableScriptsForNetworkPlayer) mb.enabled = false;
         }
     }
 

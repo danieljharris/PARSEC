@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class Node : MonoBehaviour
 {
-    private bool highlighted = false;
-    private Color currentHighlightColor = Color.clear;
+    [SerializeField] private bool highlighted = false;
+    [SerializeField] private Color currentHighlightColor = Color.clear;
 
     private List<Edge> edges = new List<Edge>();
 
@@ -13,10 +13,10 @@ public class Node : MonoBehaviour
     public bool HasTarget(Node target) => edges.Exists(edge => ReferenceEquals(edge.target, target));
     public void AddEdge(Edge newEdge) => edges.Add(newEdge);
 
-    public void Highlight(Color color)
+    public void Highlight(Color color, bool force = false)
     {
         // If this node is already highlighted, return
-        if (highlighted) return;
+        if (highlighted && !force) return;
         highlighted = true;
         currentHighlightColor = color;
 
@@ -47,6 +47,7 @@ public class Node : MonoBehaviour
     {
         // If the node is not highlighted, or if the node is not highlighted in the specified color, then return.
         if (!highlighted || currentHighlightColor != color) return;
+        highlighted = false;
 
         // Get the object that has the outline effect and remove it. 
         GameObject applyHighlightTo = transform.Find("Visuals").gameObject;
@@ -56,13 +57,37 @@ public class Node : MonoBehaviour
         // Set currentHighlightColor to clear and destroy the outline effect.
         currentHighlightColor = Color.clear;
         Destroy(outline);
-        highlighted = false;
 
         // Loop through all edges connected to the node.
         foreach (Edge edge in edges)
         {
             // If the target node of the edge is highlighted in the specified color, then set the line color to the starting color.
             if (edge.target.currentHighlightColor == color)
+            {
+                edge.lineRenderer.startColor = edge.startingColor;
+                edge.lineRenderer.endColor = edge.startingColor;
+            }
+        }
+    }
+    public void UnHighlight()
+    {
+        if (!highlighted) return;
+        highlighted = false;
+
+        // Get the object that has the outline effect and remove it. 
+        GameObject applyHighlightTo = transform.Find("Visuals").gameObject;
+        Outline outline = applyHighlightTo.GetComponent<Outline>();
+        if (outline == null) return;
+
+        // Set currentHighlightColor to clear and destroy the outline effect.
+        currentHighlightColor = Color.clear;
+        Destroy(outline);
+
+        // Loop through all edges connected to the node.
+        foreach (Edge edge in edges)
+        {
+            // If the target node of the edge is highlighted in the specified color, then set the line color to the starting color.
+            if (edge.target.currentHighlightColor == Color.clear)
             {
                 edge.lineRenderer.startColor = edge.startingColor;
                 edge.lineRenderer.endColor = edge.startingColor;

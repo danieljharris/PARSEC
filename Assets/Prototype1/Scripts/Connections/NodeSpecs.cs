@@ -4,6 +4,7 @@ using Fusion;
 using System.Linq;
 
 using static Detectability;
+using System;
 
 // C# 9.0 workaround for Unity .NET 5
 namespace System.Runtime.CompilerServices { internal static class IsExternalInit {}}
@@ -110,24 +111,58 @@ public class NodeSpecs : MonoBehaviour
         }
     }
 
-    public Detectability GetAttackTypeDetectability(AttackType attackType)
+    private Detectability GetAttackTypeDetectability(AttackType attackType)
     {
         return AttackTypeDetectability[(int)attackType];
     }
 
-    public bool ContainsWare(List<Software> software, List<Hardware> hardware)
+    public void ApplyFilter(Color filterColor, bool isPresenter, List<Software> software, List<Hardware> hardware)
+    {
+        Action filter = (isPresenter, Contains(software, hardware)) switch
+        {
+            (true, true) => () => RPC_Highlight(filterColor),
+            (true, false) => () => RPC_UnHighlight(filterColor),
+            (false, true) => () => Highlight(filterColor),
+            (false, false) => () => UnHighlight(filterColor)
+        };
+        filter();
+    }
+    public void ApplyFilter(bool isPresenter, List<AttackType> attackTypes)
+    {
+        Detectability lowest = Full;
+
+        foreach (AttackType attackType in attackTypes)
+        {
+            if (GetAttackTypeDetectability(attackType) < lowest)
+            {
+                lowest = GetAttackTypeDetectability(attackType);
+            }
+        }
+
+        if (lowest == Full)
+            Highlight(Color.green, true);
+        else if (lowest == Partial)
+            Highlight(Color.yellow, true);
+        else
+            Highlight(Color.red, true);
+    }
+
+    private bool Contains(List<Software> software, List<Hardware> hardware)
     {
         return software.All(this.software.Contains) &&
                hardware.All(this.hardware.Contains); 
     }
 
-    public void Highlight(Color color) => GetComponent<Node>().Highlight(color);
+    public void Highlight(Color color, bool force = false) => GetComponent<Node>().Highlight(color, force);
     public void UnHighlight(Color color) => GetComponent<Node>().UnHighlight(color);
+    public void UnHighlight() => GetComponent<Node>().UnHighlight();
 
     [Rpc(RpcSources.All, RpcTargets.All, InvokeLocal = true)]
-    public void RPC_Highlight(Color color) => GetComponent<Node>().Highlight(color);
+    public void RPC_Highlight(Color color, bool force = false) => GetComponent<Node>().Highlight(color, force);
     [Rpc(RpcSources.All, RpcTargets.All, InvokeLocal = true)]
     public void RPC_UnHighlight(Color color) => GetComponent<Node>().UnHighlight(color);
+    [Rpc(RpcSources.All, RpcTargets.All, InvokeLocal = true)]
+    public void RPC_UnHighlight() => GetComponent<Node>().UnHighlight();
 }
 
 public enum Software {

@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.ogxd.project-curator": {
+      "version": "https://github.com/ogxd/project-curator.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "5a5eb9a29570b6f59d117945552f5a4d4850c6b5"
+    },
     "com.unity.ide.vscode": {
       "version": "1.2.5",
       "depth": 0,
