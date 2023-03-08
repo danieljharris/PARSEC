@@ -1,2 +1,7 @@
 using UnityEngine;
-public class Menu : MonoBehaviour {}
+using UnityEngine.Events;
+public class Menu : MonoBehaviour
+{
+    public UnityEvent Show = new UnityEvent();
+    public UnityEvent Hide = new UnityEvent();
+}

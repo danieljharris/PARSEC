@@ -13,4 +13,9 @@ public class WandPickup : MonoBehaviour
             AttachedToMenu = false;
         }
     }
+    public void SetActive(bool active)
+    {
+        if(AttachedToMenu)
+            gameObject.SetActive(active);
+    }
 }
