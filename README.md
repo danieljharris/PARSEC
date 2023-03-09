@@ -5,7 +5,7 @@ This is an in development Unity project to visualize computer networks and confi
 - Threat Detection
 - Situaltional Analysis
 - Stake Holder Communication
-- Threat Detectability and Security Gaps
+- Threat Security Gap Detectability
 
 # Dependencies / Assets
 - [Unity 2021.3.16f1](https://unity3d.com/get-unity/)
