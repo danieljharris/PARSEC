@@ -5,7 +5,6 @@ using UnityEngine;
 public class MenuManager : MonoBehaviour
 {
     [SerializeField] private BooleanAction MenuButton;
-    [SerializeField] private Menu MainMenu;
     [SerializeField] private List<Menu> menus;
     [SerializeField] private Presenter presenter;
     private Menu CurrentMenu;
@@ -37,7 +36,7 @@ public class MenuManager : MonoBehaviour
         {
             MenuButtonHeld = true;
             if(!MenuShown)
-                Show(MainMenu);
+                Show(menus[0]);
             else
                 Hide();
         }
@@ -48,12 +47,14 @@ public class MenuManager : MonoBehaviour
         MenuShown = true;
         CurrentMenu = menu;
         CurrentMenu.transform.localScale = new Vector3(0.400000006f, 0.400000006f, 0.00499999989f);
+        CurrentMenu.Show.Invoke();
     }
     private void Hide()
     {
         if(!MenuShown) return;
         MenuShown = false;
         CurrentMenu.transform.localScale = Vector3.zero;
+        CurrentMenu.Hide.Invoke();
     }
     public void Switch(Menu newMenu)
     {

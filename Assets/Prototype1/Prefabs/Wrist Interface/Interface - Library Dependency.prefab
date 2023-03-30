@@ -307,6 +307,7 @@ GameObject:
   - component: {fileID: 545012420004799590}
   - component: {fileID: 545012420004799591}
   - component: {fileID: 545012420004799592}
+  - component: {fileID: 2942494514654448357}
   m_Layer: 0
   m_Name: Interface - Library Dependency
   m_TagString: Untagged
@@ -397,6 +398,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2942494514654448357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545012420004799593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 212cb6d15f94292479c82ae5ad0aac5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Show:
+    m_PersistentCalls:
+      m_Calls: []
+  Hide:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &545012420196165695
 GameObject:
   m_ObjectHideFlags: 0
@@ -13769,6 +13788,7 @@ MonoBehaviour:
   - {fileID: 1842242424079543010}
   - {fileID: 6270434430903984196}
   - {fileID: 748605550380630992}
+  resetType: 0
 --- !u!114 &2553576603968397463
 MonoBehaviour:
   m_ObjectHideFlags: 0

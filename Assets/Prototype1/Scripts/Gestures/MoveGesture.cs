@@ -31,6 +31,13 @@ public class MoveGesture : SingleHandGesture
     }
     private Vector3 CalculatePosition()
     {
+        /* 
+        New Position = Previous Position of User
+                    + ((Current Position of Controller Relative to User
+                    - Starting Position of Controller Relative to User) * (Movement Multiplier + 3))
+        */
+
+
         float movementMultiplier = 3 + Avatar.localScale.x;
         Vector3 controllerMovement = GetRelativeControllerPosition() - InitialControllerPosition;
         Vector3 relativeMovement = controllerMovement * movementMultiplier;
