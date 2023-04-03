@@ -183,18 +183,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c66c292fcfef1dc498c75cb76883aac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  info: 'EC2 Instance
+  info: 'Type:
+
+    EC2 Instance
 
 
     Connections:
 
-    - NAT Gateway
+    NAT Gateway
 
 
     Services:
 
-    -
-    Web Server - Apache'
+    Web
+    Server - Apache'
 --- !u!114 &133186820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1268,9 +1270,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 634f7fe11f3ec584e916d37f2493682d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  software: 
-  hardware: 
-  dataSources: 
+  software: 01000000
+  hardware: 0100000002000000
+  dataSources: 0100000002000000
 --- !u!1001 &661394583
 PrefabInstance:
   m_ObjectHideFlags: 0
