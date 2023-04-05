@@ -1,11 +1,11 @@
 # XR-Network-Visualizer 1.0
-This is an in development Unity project to visualize computer networks and configurations. This project is designed to explore the utility of virtual reality as a tool for cyber security. It has potential to be used in the following use cases:
+This Unity project creates a multiplayer virtual reality environment to visualize computer networks and configurations. This project aims to explore the best use case for virtual reality technology in the area of cyber security data visualisation but also has potential to be used in the following use cases:
 - Cyber Security Education – Teaching/Training
 - Misconfiguration Detection
 - Threat Detection
-- Situaltional Analysis
+- Situational Awareness
 - Stake Holder Communication
-- Threat Security Gap Detectability
+- Security Vulnerability Detection
 
 # Dependencies / Assets
 - [Unity 2021.3.16f1](https://unity3d.com/get-unity/)
@@ -16,9 +16,26 @@ This is an in development Unity project to visualize computer networks and confi
 - Highlight Effect ([cakeslice](https://assetstore.unity.com/packages/vfx/shaders/fullscreen-camera-effects/outline-effect-78608))
 
 # Features
-### General Features
+### Overview
+- Supports both local and remote multiplayer
 - Built in support for any [OpenXR compatible headset](https://www.khronos.org/conformance/adopters/conformant-products/openxr)
-- Locomotion - Teleportation & Analog Stick Movement
+- Unique user perspective scaling movement mechanics
+- Simplified and/or detailed network visualisations to fit the use case
+- Ability to look inside a service to gain additional information about the service
+- Interactable wand tools to probe the network
+- Menu system that allows to filter network elements to identify misconfiguration and potential security vulnerabilities
+
+### Object Interactions
+<img height="200" src=https://user-images.githubusercontent.com/1362512/230084873-fa22f867-7a76-4002-b498-c8afd9746327.png>
+
+### World Drag
+<img height="200" src=https://user-images.githubusercontent.com/1362512/230084772-4eeabbda-c0a6-43ea-9e89-35386e0c13b9.png>
+
+### Perspective Scaling
+<img height="200" src=https://user-images.githubusercontent.com/1362512/230084666-ba0f3261-75e5-4232-a2b3-89fcd113ca15.png>
+
+### AWS Network Metaphors
+<img height="200" src=https://user-images.githubusercontent.com/1362512/230085024-c14f0615-5d7a-4311-9cb2-b3bec7da6e3e.png>
 
 ### Computer and Network Object Metaphors<br/>
 <img height="200" src=https://user-images.githubusercontent.com/1362512/176453477-a47827ac-87de-47a7-8f25-0820a950694c.png>
@@ -34,10 +51,3 @@ This is an in development Unity project to visualize computer networks and confi
 
 ### Reset Buttons - Scene Reset & Player Reset<br/>
 <img height="200" src=https://user-images.githubusercontent.com/1362512/176455894-386215ac-82cd-4b31-88ef-599e45364b34.png>
-
-
-
-# Roadmap
-1. Create a representation of a valid AWS environment
-2. Scalable and groupable network objects
-3. Live network alterations (edit network connections, configuration settings)
