@@ -397,7 +397,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b43de0ffd05a3474cb17924ed187170f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runner: {fileID: 0}
 --- !u!1 &545012420196165695
 GameObject:
   m_ObjectHideFlags: 0
@@ -9538,7 +9537,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6429276163555729731}
         m_TargetAssemblyTypeName: SceneSwitch, Assembly-CSharp
-        m_MethodName: LoadScene
+        m_MethodName: RPC_LoadScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10638,7 +10637,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6429276163555729731}
         m_TargetAssemblyTypeName: SceneSwitch, Assembly-CSharp
-        m_MethodName: LoadScene
+        m_MethodName: RPC_LoadScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
