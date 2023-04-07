@@ -14298,12 +14298,24 @@ PrefabInstance:
       value: SocialEngineering
       objectReference: {fileID: 0}
     - target: {fileID: 1509081170941852939, guid: 9f5424d08d3d17b4eb3212140eced7e1, type: 3}
+      propertyPath: enabledHover.fontSize
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509081170941852939, guid: 9f5424d08d3d17b4eb3212140eced7e1, type: 3}
+      propertyPath: enabledActive.fontSize
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509081170941852939, guid: 9f5424d08d3d17b4eb3212140eced7e1, type: 3}
       propertyPath: enabledHover.buttonText
       value: Social Engineering
       objectReference: {fileID: 0}
     - target: {fileID: 1509081170941852939, guid: 9f5424d08d3d17b4eb3212140eced7e1, type: 3}
       propertyPath: enabledActive.buttonText
       value: Social Engineering
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509081170941852939, guid: 9f5424d08d3d17b4eb3212140eced7e1, type: 3}
+      propertyPath: enabledInactive.fontSize
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1509081170941852939, guid: 9f5424d08d3d17b4eb3212140eced7e1, type: 3}
       propertyPath: enabledInactive.buttonText
@@ -14484,12 +14496,24 @@ PrefabInstance:
       value: Misconfiguration
       objectReference: {fileID: 0}
     - target: {fileID: 1509081170941852939, guid: 9f5424d08d3d17b4eb3212140eced7e1, type: 3}
+      propertyPath: enabledHover.fontSize
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509081170941852939, guid: 9f5424d08d3d17b4eb3212140eced7e1, type: 3}
+      propertyPath: enabledActive.fontSize
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509081170941852939, guid: 9f5424d08d3d17b4eb3212140eced7e1, type: 3}
       propertyPath: enabledHover.buttonText
       value: Misconfiguration
       objectReference: {fileID: 0}
     - target: {fileID: 1509081170941852939, guid: 9f5424d08d3d17b4eb3212140eced7e1, type: 3}
       propertyPath: enabledActive.buttonText
       value: Misconfiguration
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509081170941852939, guid: 9f5424d08d3d17b4eb3212140eced7e1, type: 3}
+      propertyPath: enabledInactive.fontSize
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1509081170941852939, guid: 9f5424d08d3d17b4eb3212140eced7e1, type: 3}
       propertyPath: enabledInactive.buttonText
@@ -14949,12 +14973,24 @@ PrefabInstance:
       value: Reconnaissance
       objectReference: {fileID: 0}
     - target: {fileID: 1509081170941852939, guid: 9f5424d08d3d17b4eb3212140eced7e1, type: 3}
+      propertyPath: enabledHover.fontSize
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509081170941852939, guid: 9f5424d08d3d17b4eb3212140eced7e1, type: 3}
+      propertyPath: enabledActive.fontSize
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509081170941852939, guid: 9f5424d08d3d17b4eb3212140eced7e1, type: 3}
       propertyPath: enabledHover.buttonText
       value: Reconnaissance
       objectReference: {fileID: 0}
     - target: {fileID: 1509081170941852939, guid: 9f5424d08d3d17b4eb3212140eced7e1, type: 3}
       propertyPath: enabledActive.buttonText
       value: Reconnaissance
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509081170941852939, guid: 9f5424d08d3d17b4eb3212140eced7e1, type: 3}
+      propertyPath: enabledInactive.fontSize
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1509081170941852939, guid: 9f5424d08d3d17b4eb3212140eced7e1, type: 3}
       propertyPath: enabledInactive.buttonText
@@ -15042,12 +15078,24 @@ PrefabInstance:
       value: SoftwareVulnerabilities
       objectReference: {fileID: 0}
     - target: {fileID: 1509081170941852939, guid: 9f5424d08d3d17b4eb3212140eced7e1, type: 3}
+      propertyPath: enabledHover.fontSize
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509081170941852939, guid: 9f5424d08d3d17b4eb3212140eced7e1, type: 3}
+      propertyPath: enabledActive.fontSize
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509081170941852939, guid: 9f5424d08d3d17b4eb3212140eced7e1, type: 3}
       propertyPath: enabledHover.buttonText
       value: Software Vulnerabilities
       objectReference: {fileID: 0}
     - target: {fileID: 1509081170941852939, guid: 9f5424d08d3d17b4eb3212140eced7e1, type: 3}
       propertyPath: enabledActive.buttonText
       value: Software Vulnerabilities
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509081170941852939, guid: 9f5424d08d3d17b4eb3212140eced7e1, type: 3}
+      propertyPath: enabledInactive.fontSize
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1509081170941852939, guid: 9f5424d08d3d17b4eb3212140eced7e1, type: 3}
       propertyPath: enabledInactive.buttonText
