@@ -8,6 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Prototype1/Scenes/Simple AWS Env.unity
     guid: 88b537f809660ba408de69849f2c2e33
+  - enabled: 1
+    path: Assets/Prototype1/Scenes/Simple AWS Env 2.unity
+    guid: 5a5da44cecd6e3c4293fa18139e16d44
   - enabled: 0
     path: Assets/Prototype1/Scenes/Computer Objects.unity
     guid: 6760f163ef06fc4429885d09b10a2394
