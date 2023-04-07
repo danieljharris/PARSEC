@@ -1812,7 +1812,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1328261037738135410, guid: 3bb36be9ee9cc664d9a5644921fa146f, type: 3}
       propertyPath: m_TagString
-      value: FusionNetworkRunner
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 1328261037738135411, guid: 3bb36be9ee9cc664d9a5644921fa146f, type: 3}
       propertyPath: m_RootOrder
