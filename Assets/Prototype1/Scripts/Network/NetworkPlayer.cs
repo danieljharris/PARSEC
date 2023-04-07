@@ -21,6 +21,8 @@ public class NetworkPlayer : NetworkBehaviour, IPlayerLeft
             foreach (GameObject go in _disableForNetworkPlayer) go.SetActive(false);
             foreach (MonoBehaviour mb in _disableScriptsForNetworkPlayer) mb.enabled = false;
         }
+
+        DontDestroyOnLoad(gameObject);
     }
 
     public void PlayerLeft(PlayerRef player)

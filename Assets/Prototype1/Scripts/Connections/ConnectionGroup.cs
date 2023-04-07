@@ -98,8 +98,8 @@ public class ConnectionGroup : MonoBehaviour
 
         // Set the start and end points of the line
         //  with offset from the center of the collider
-        line.SetPosition(0, center += (direction * offset));
-        line.SetPosition(1, center2 += (-direction * offset2));
+        line.SetPosition(0, center += direction * offset);
+        line.SetPosition(1, center2 += -direction * offset2);
     }
 
     public void Highlight(Color color)

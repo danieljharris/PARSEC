@@ -6,6 +6,12 @@ public class NetworkRunnerHandler : MonoBehaviour
 {
     [SerializeField] private string _SessionName;
 
+    void Awake()
+    {
+        int numberOfRunners = Object.FindObjectsOfType<NetworkRunnerHandler>().Length;
+        if(numberOfRunners > 1) Destroy(gameObject);
+    }
+
     void Start()
     {
         NetworkRunner runner = GetComponent<NetworkRunner>();
