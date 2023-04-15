@@ -96,6 +96,11 @@ public class NodeList : MonoBehaviour
             }
         }
     }
+    private IEnumerator clearHighlightingCoroutine(bool isPresenter, bool force = false)
+    {
+        yield return new WaitForSeconds(0.1f);
+        clearHighlighting(isPresenter, force);
+    }
 
     // Software
     public void addFilter(Software software, bool isPresenter)
@@ -106,9 +111,15 @@ public class NodeList : MonoBehaviour
     public void removeFilter(Software software, bool isPresenter)
     {
         softwareFilters.Remove(software);
-
-        if(filterCountWare() != 0) applyFilterWare(isPresenter);
-        else clearHighlighting(isPresenter);
+        if(filterCountWare() != 0)
+        {
+            applyFilterWare(isPresenter);
+        }
+        else
+        {
+            //Sleep for 1 second to allow previous highlighting to clear via applyFilterWare
+            StartCoroutine(clearHighlightingCoroutine(isPresenter));
+        }
     }
 
     // Hardware
@@ -121,8 +132,15 @@ public class NodeList : MonoBehaviour
     {
         hardwareFilters.Remove(hardware);
 
-        if(filterCountWare() != 0) applyFilterWare(isPresenter);
-        else clearHighlighting(isPresenter);
+        if(filterCountWare() != 0)
+        {
+            applyFilterWare(isPresenter);
+        }
+        else
+        {
+            //Sleep for 1 second to allow previous highlighting to clear via applyFilterWare
+            StartCoroutine(clearHighlightingCoroutine(isPresenter));
+        }
     }
 
     // AttackTypes
@@ -137,6 +155,17 @@ public class NodeList : MonoBehaviour
 
         if(filterCountArrack() != 0) applyFilterAttack(isPresenter);
         else clearHighlighting(isPresenter, true);
+
+
+        if(filterCountArrack() != 0)
+        {
+            applyFilterAttack(isPresenter);
+        }
+        else
+        {
+            //Sleep for 1 second to allow previous highlighting to clear via applyFilterWare
+            StartCoroutine(clearHighlightingCoroutine(isPresenter, true));
+        }
     }
 }
 
