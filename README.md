@@ -1,4 +1,4 @@
-# XR-Network-Visualizer 1.0
+# PARSEC
 This Unity project creates a multiplayer virtual reality environment to visualize computer networks and configurations. This project aims to explore the best use case for virtual reality technology in the area of cyber security data visualisation but also has potential to be used in the following use cases:
 - Cyber Security Education – Teaching/Training
 - Misconfiguration Detection
@@ -6,6 +6,11 @@ This Unity project creates a multiplayer virtual reality environment to visualiz
 - Situational Awareness
 - Stake Holder Communication
 - Security Vulnerability Detection
+
+# Impact and Accessibility
+PARSEC can also be used outside of cyber security and has the following porential uses:
+- Pre-configured environment to build any multiplayer VR application # Note: Create tut for this #
+- Immersive analytics to study the benefits of 3D immersive network visualisations
 
 # Dependencies / Assets
 - [Unity 2021.3.16f1](https://unity3d.com/get-unity/)
