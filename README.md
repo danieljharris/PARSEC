@@ -9,7 +9,7 @@ This Unity project creates a multiplayer virtual reality environment to visualiz
 
 # Impact and Accessibility
 PARSEC can also be used outside of cyber security and has the following porential uses:
-- Pre-configured environment to build any multiplayer VR application # Note: Create tut for this #
+- Pre-configured environment to build any multiplayer VR application (using VRTK v4 + Photon Fusion) # Note: Create tut for this #
 - Immersive analytics to study the benefits of 3D immersive network visualisations
 
 # Dependencies / Assets
