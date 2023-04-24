@@ -12,6 +12,7 @@
     "com.ogxd.project-curator": "https://github.com/ogxd/project-curator.git",
     "com.unity.ide.vscode": "1.2.5",
     "com.unity.nuget.mono-cecil": "1.10.2",
+    "com.unity.render-pipelines.universal": "12.1.8",
     "com.unity.textmeshpro": "3.0.6",
     "com.unity.xr.openxr": "1.5.3",
     "io.extendreality.tilia.camerarigs.spatialsimulator.unity": "2.0.10",
