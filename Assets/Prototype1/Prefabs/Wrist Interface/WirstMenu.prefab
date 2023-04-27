@@ -481,7 +481,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6473916488625257772, guid: 57696cf04cf20d9418fdf863174fa279, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6613484339382427767, guid: 57696cf04cf20d9418fdf863174fa279, type: 3}
       propertyPath: m_Mesh
@@ -513,7 +513,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8936082629963348343, guid: 57696cf04cf20d9418fdf863174fa279, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8476475820333730565, guid: 57696cf04cf20d9418fdf863174fa279, type: 3}
@@ -537,17 +537,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 212cb6d15f94292479c82ae5ad0aac5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &6409780851322498682 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6375645187998268323, guid: 57696cf04cf20d9418fdf863174fa279, type: 3}
-  m_PrefabInstance: {fileID: 40191812714698201}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfd95f68eae033840a5ffbbff69f2e99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1325055127556404724
@@ -672,7 +661,7 @@ PrefabInstance:
     - target: {fileID: 7926757153863136263, guid: 5b092845f457ddf459adb14facb1f77d, type: 3}
       propertyPath: highlighters.Array.data[0]
       value: 
-      objectReference: {fileID: 6409780851322498682}
+      objectReference: {fileID: 0}
     - target: {fileID: 7926757153863136263, guid: 5b092845f457ddf459adb14facb1f77d, type: 3}
       propertyPath: highlighters.Array.data[1]
       value: 

@@ -405,6 +405,8 @@ MonoBehaviour:
   consumerRigidbody: {fileID: 4761294327546086343}
   collisionNotifier: {fileID: 5136073234057081394}
   meshContainer: {fileID: 3118689934166973143}
+  addCollisionExtractor: {fileID: 0}
+  removeCollisionExtractor: {fileID: 0}
   activeCollisions: {fileID: 4055438761780791360}
   touchConfiguration: {fileID: 1502497691797488854}
   grabConfiguration: {fileID: 742952634225569987}
@@ -730,6 +732,7 @@ MonoBehaviour:
       m_Calls: []
   grabType: 0
   grabProviderIndex: 0
+  attemptSwapSecondaryForPrimaryOnPrimaryDrop: 0
 --- !u!54 &4761294327546086343
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -859,6 +862,8 @@ MonoBehaviour:
     RotBlendStart: 0.1
     RotBlendEnd: 0.5
     RotTeleportRadians: 1.5
+  UseLegacySharedModeInterpolation: 0
+  TargetInterpolationDelay: 0.03
 --- !u!114 &5234402933456651716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -896,6 +901,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec531eceee7f6d47a23773acb092f2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  presenter: {fileID: 0}
 --- !u!114 &4832809789782030050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -909,6 +915,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AttachedToMenu: 1
+  OnPickup:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3480970149009765610}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  OnPutBack:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3480970149009765610}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8323298735991413933
 GameObject:
   m_ObjectHideFlags: 0
