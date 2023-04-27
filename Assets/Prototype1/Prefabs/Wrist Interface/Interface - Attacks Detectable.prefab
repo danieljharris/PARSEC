@@ -13176,7 +13176,7 @@ MonoBehaviour:
   - {fileID: 5750248191242820158}
   - {fileID: 8119346119511288922}
   - {fileID: 6645191214439562801}
-  resetType: 1
+  resetType: 2
 --- !u!114 &2553576603968397463
 MonoBehaviour:
   m_ObjectHideFlags: 0
