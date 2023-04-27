@@ -1700,6 +1700,8 @@ MonoBehaviour:
     RotBlendStart: 0.1
     RotBlendEnd: 0.5
     RotTeleportRadians: 1.5
+  UseLegacySharedModeInterpolation: 0
+  TargetInterpolationDelay: 0.03
 --- !u!114 &694216090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2713,6 +2715,8 @@ MonoBehaviour:
     RotBlendStart: 0.1
     RotBlendEnd: 0.5
     RotTeleportRadians: 1.5
+  UseLegacySharedModeInterpolation: 0
+  TargetInterpolationDelay: 0.03
 --- !u!114 &1009442894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3420,6 +3424,8 @@ MonoBehaviour:
     RotBlendStart: 0.1
     RotBlendEnd: 0.5
     RotTeleportRadians: 1.5
+  UseLegacySharedModeInterpolation: 0
+  TargetInterpolationDelay: 0.03
 --- !u!114 &1099764470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3492,6 +3498,8 @@ MonoBehaviour:
     RotBlendStart: 0.1
     RotBlendEnd: 0.5
     RotTeleportRadians: 1.5
+  UseLegacySharedModeInterpolation: 0
+  TargetInterpolationDelay: 0.03
 --- !u!114 &1152650105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4703,6 +4711,8 @@ MonoBehaviour:
     RotBlendStart: 0.1
     RotBlendEnd: 0.5
     RotTeleportRadians: 1.5
+  UseLegacySharedModeInterpolation: 0
+  TargetInterpolationDelay: 0.03
 --- !u!114 &1517285429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5217,6 +5227,8 @@ MonoBehaviour:
     RotBlendStart: 0.1
     RotBlendEnd: 0.5
     RotTeleportRadians: 1.5
+  UseLegacySharedModeInterpolation: 0
+  TargetInterpolationDelay: 0.03
 --- !u!114 &1620467302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5554,6 +5566,8 @@ MonoBehaviour:
     RotBlendStart: 0.1
     RotBlendEnd: 0.5
     RotTeleportRadians: 1.5
+  UseLegacySharedModeInterpolation: 0
+  TargetInterpolationDelay: 0.03
 --- !u!114 &1632031792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7358,6 +7372,8 @@ MonoBehaviour:
     RotBlendStart: 0.1
     RotBlendEnd: 0.5
     RotTeleportRadians: 1.5
+  UseLegacySharedModeInterpolation: 0
+  TargetInterpolationDelay: 0.03
 --- !u!114 &2065424198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7518,6 +7534,7 @@ MonoBehaviour:
       m_Calls: []
   grabType: 0
   grabProviderIndex: 0
+  attemptSwapSecondaryForPrimaryOnPrimaryDrop: 0
 --- !u!4 &1105090741616426450
 Transform:
   m_ObjectHideFlags: 0
@@ -7976,6 +7993,8 @@ MonoBehaviour:
   consumerRigidbody: {fileID: 8862883228865829971}
   collisionNotifier: {fileID: 9199224308385852838}
   meshContainer: {fileID: 1417232385883030851}
+  addCollisionExtractor: {fileID: 0}
+  removeCollisionExtractor: {fileID: 0}
   activeCollisions: {fileID: 453729283}
   touchConfiguration: {fileID: 1285248353}
   grabConfiguration: {fileID: 3648960080165187415}
