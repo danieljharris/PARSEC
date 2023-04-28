@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Prototype1/Scenes/Study - Tutorial.unity
+    guid: 49dfcf4908cf3e1449940238ca4aee5c
+  - enabled: 1
     path: Assets/Prototype1/Scenes/Simple AWS Env.unity
     guid: 88b537f809660ba408de69849f2c2e33
   - enabled: 1

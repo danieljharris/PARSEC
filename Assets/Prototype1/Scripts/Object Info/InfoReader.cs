@@ -3,11 +3,17 @@ using UnityEngine;
 
 public class InfoReader : MonoBehaviour
 {
+    [SerializeField] private bool isEnabled = true;
     public GameObject infoPanel;
     public TextMeshPro infoPanelText;
     private GameObject colliderObject;
+
+    public void IsEnabled(bool value) => isEnabled = value;
+
     void OnTriggerEnter(Collider other)
     {
+        if(!isEnabled) return;
+
         ObjectInfo objectInfo = other?.gameObject?.GetComponent<ObjectInfo>();
         if (objectInfo == null) return;
 
@@ -16,8 +22,11 @@ public class InfoReader : MonoBehaviour
 
         colliderObject = other.gameObject;
     }
+
     void OnTriggerExit(Collider other)
     {
+        if(!isEnabled) return;
+
         ObjectInfo objectInfo = other?.gameObject?.GetComponent<ObjectInfo>();
         if (objectInfo == null) return;
 

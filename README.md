@@ -13,12 +13,12 @@ PARSEC can also be used outside of cyber security and has the following porentia
 - Immersive analytics to study the benefits of 3D immersive network visualisations
 
 # Dependencies / Assets
-- [Unity 2021.3.16f1](https://unity3d.com/get-unity/)
+- [Unity 2021.3.23f1](https://unity3d.com/get-unity/)
 - XR Integration ([VRTK v4](https://vrtoolkit.readme.io/v4.0.0))
 - Multiplayer ([Photon Fusion](https://www.photonengine.com/en-US/Fusion))
 - Laptop & Desk Models ([iPoly3D](https://assetstore.unity.com/packages/3d/environments/lowpoly-server-room-props-197268))
 - Wand Models ([Frost Forged](https://assetstore.unity.com/packages/3d/props/weapons/3d-items-free-wand-pack-46225))
-- Highlight Effect ([cakeslice](https://assetstore.unity.com/packages/vfx/shaders/fullscreen-camera-effects/outline-effect-78608))
+- Highlight Effect ([Chris Nolet](https://assetstore.unity.com/packages/tools/particles-effects/quick-outline-115488))
 
 # Features
 ### Overview
