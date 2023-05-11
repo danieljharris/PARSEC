@@ -1,4 +1,4 @@
-# PARSEC
+# PARSEC - Collaborative VR Network Visualiser
 This Unity project creates a multiplayer virtual reality environment to visualize computer networks and configurations. This project aims to explore the best use case for virtual reality technology in the area of cyber security data visualisation but also has potential to be used in the following use cases:
 - Cyber Security Education – Teaching/Training
 - Misconfiguration Detection
