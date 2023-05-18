@@ -153,16 +153,23 @@ public class NodeSpecs : MonoBehaviour
                hardware.All(this.hardware.Contains); 
     }
 
-    public void Highlight(Color color, bool force = false) => GetComponent<Node>().Highlight(color, force);
-    public void UnHighlight(Color color) => GetComponent<Node>().UnHighlight(color);
-    public void UnHighlight() => GetComponent<Node>().UnHighlight();
+    private Node GetNode()
+    {
+        Node node = GetComponent<Node>();
+        if (node != null) return node;
+        else return transform.Find("MeshContainer").Find("Service Specs").gameObject.GetComponent<Node>();
+    }
+
+    public void Highlight(Color color, bool force = false) => GetNode().Highlight(color, force);
+    public void UnHighlight(Color color) => GetNode().UnHighlight(color);
+    public void UnHighlight() => GetNode().UnHighlight();
 
     [Rpc(RpcSources.All, RpcTargets.All, InvokeLocal = true)]
-    public void RPC_Highlight(Color color, bool force = false) => GetComponent<Node>().Highlight(color, force);
+    public void RPC_Highlight(Color color, bool force = false) => GetNode().Highlight(color, force);
     [Rpc(RpcSources.All, RpcTargets.All, InvokeLocal = true)]
-    public void RPC_UnHighlight(Color color) => GetComponent<Node>().UnHighlight(color);
+    public void RPC_UnHighlight(Color color) => GetNode().UnHighlight(color);
     [Rpc(RpcSources.All, RpcTargets.All, InvokeLocal = true)]
-    public void RPC_UnHighlight() => GetComponent<Node>().UnHighlight();
+    public void RPC_UnHighlight() => GetNode().UnHighlight();
 }
 
 public enum Software {
