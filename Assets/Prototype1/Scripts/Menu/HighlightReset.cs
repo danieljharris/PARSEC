@@ -13,7 +13,11 @@ public class HighlightReset : MonoBehaviour
         Presenter.onPresenterChanged += removeAllFilters;
 
         NodeList nodeList = GameObject.FindWithTag("Network")?.GetComponent<NodeList>();
-        if (nodeList == null) Debug.Log("Network/NodeList not found");
+        if (nodeList == null)
+        {
+            Debug.Log("Network/NodeList not found");
+            return;
+        }
 
         switch (resetType)
         {

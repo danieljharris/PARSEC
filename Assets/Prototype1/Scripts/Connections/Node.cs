@@ -21,7 +21,8 @@ public class Node : MonoBehaviour
         currentHighlightColor = color;
 
         // Get the visuals object from the node
-        GameObject applyHighlightTo = transform.Find("Visuals").gameObject;
+        GameObject applyHighlightTo = transform.Find("Visuals")?.gameObject;
+        if (applyHighlightTo == null) applyHighlightTo = this.gameObject;
 
         // Add an outline component to the visuals object
         Outline outline = applyHighlightTo.GetOrAddComponent<Outline>();
@@ -50,7 +51,8 @@ public class Node : MonoBehaviour
         highlighted = false;
 
         // Get the object that has the outline effect and remove it. 
-        GameObject applyHighlightTo = transform.Find("Visuals").gameObject;
+        GameObject applyHighlightTo = transform.Find("Visuals")?.gameObject;
+        if (applyHighlightTo == null) applyHighlightTo = this.gameObject;
         Outline outline = applyHighlightTo.GetComponent<Outline>();
         if (outline == null) return;
 

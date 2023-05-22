@@ -84,22 +84,42 @@ public class ConnectionGroup : MonoBehaviour
 
     private void DrawLine(GameObject source, GameObject target, LineRenderer line)
     {
-        Renderer rend = source.GetComponentInChildren<Renderer>();
-        Renderer rend2 = target.GetComponentInChildren<Renderer>();
+        var (center, offset) = GetCenter(source);
+        var (center2, offset2) = GetCenter(target);
 
-        Vector3 center = rend.bounds.center;
-        Vector3 center2 = rend2.bounds.center;
         Vector3 direction = (center2 - center).normalized;
-
-        float average(Vector3 vec) => (vec.x + vec.y + vec.z) / 3;
-
-        float offset = average(rend.bounds.size) / connectionLineOffset;
-        float offset2 = average(rend2.bounds.size) / connectionLineOffset;
 
         // Set the start and end points of the line
         //  with offset from the center of the collider
         line.SetPosition(0, center += direction * offset);
         line.SetPosition(1, center2 += -direction * offset2);
+    }
+
+    private float average(Vector3 vec) => (vec.x + vec.y + vec.z) / 3;
+
+    private Tuple<Vector3, float> GetCenter(GameObject obj)
+    {
+        float average(Vector3 vec) => (vec.x + vec.y + vec.z) / 3;
+
+        Vector3 center;
+        float offset;
+
+        ConnectionCenter centerScript = obj.GetComponent<ConnectionCenter>();
+
+        if(centerScript == null)
+        {
+            // If 'ConnectionCenter' does not exist then use the collider instead
+            Renderer rend = obj.GetComponentInChildren<Renderer>();
+            center = rend.bounds.center;
+            offset = average(rend.bounds.size) / connectionLineOffset;
+        }
+        else
+        {
+            center = centerScript.center.transform.position;
+            offset = centerScript.size / connectionLineOffset;
+        }
+
+        return new Tuple<Vector3, float>(center, offset);
     }
 
     public void Highlight(Color color)
