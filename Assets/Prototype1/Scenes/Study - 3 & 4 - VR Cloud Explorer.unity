@@ -2008,15 +2008,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1118468900192098307, guid: 559f8f265346bb0429933dfd5eee3805, type: 3}
       propertyPath: hardware.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1118468900192098307, guid: 559f8f265346bb0429933dfd5eee3805, type: 3}
       propertyPath: software.Array.size
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1118468900192098307, guid: 559f8f265346bb0429933dfd5eee3805, type: 3}
       propertyPath: dataSources.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118468900192098307, guid: 559f8f265346bb0429933dfd5eee3805, type: 3}
+      propertyPath: hardware.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118468900192098307, guid: 559f8f265346bb0429933dfd5eee3805, type: 3}
+      propertyPath: software.Array.data[1]
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1118468900192098307, guid: 559f8f265346bb0429933dfd5eee3805, type: 3}
       propertyPath: dataSources.Array.data[0]
@@ -9282,15 +9290,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1118468900192098307, guid: 559f8f265346bb0429933dfd5eee3805, type: 3}
       propertyPath: hardware.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1118468900192098307, guid: 559f8f265346bb0429933dfd5eee3805, type: 3}
       propertyPath: software.Array.size
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1118468900192098307, guid: 559f8f265346bb0429933dfd5eee3805, type: 3}
       propertyPath: dataSources.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118468900192098307, guid: 559f8f265346bb0429933dfd5eee3805, type: 3}
+      propertyPath: software.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118468900192098307, guid: 559f8f265346bb0429933dfd5eee3805, type: 3}
+      propertyPath: software.Array.data[1]
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1118468900192098307, guid: 559f8f265346bb0429933dfd5eee3805, type: 3}
       propertyPath: dataSources.Array.data[0]
@@ -9553,7 +9569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c66c292fcfef1dc498c75cb76883aac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  info: Database
+  info: Web Server 2
 --- !u!1001 &815309600
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9615,7 +9631,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 0e608fb7d9b580e4c9c3246cecb7960a, type: 2}
     - target: {fileID: 1457496713790009338, guid: 35d4c0fed690d2e4280d2b77ab699c56, type: 3}
       propertyPath: m_Name
-      value: Invalid
+      value: Vulnerable
       objectReference: {fileID: 0}
     - target: {fileID: 1457496713790009338, guid: 35d4c0fed690d2e4280d2b77ab699c56, type: 3}
       propertyPath: m_IsActive
@@ -9677,13 +9693,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2274256419830540280, guid: 35d4c0fed690d2e4280d2b77ab699c56, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.411312
+      objectReference: {fileID: 0}
+    - target: {fileID: 2274256419830540280, guid: 35d4c0fed690d2e4280d2b77ab699c56, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.133734
+      objectReference: {fileID: 0}
     - target: {fileID: 6809147285031594225, guid: 35d4c0fed690d2e4280d2b77ab699c56, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7764750094245303699, guid: 35d4c0fed690d2e4280d2b77ab699c56, type: 3}
       propertyPath: m_text
-      value: Invalid
+      value: Vulnerable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35d4c0fed690d2e4280d2b77ab699c56, type: 3}
@@ -15097,15 +15121,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1118468900192098307, guid: 559f8f265346bb0429933dfd5eee3805, type: 3}
       propertyPath: hardware.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1118468900192098307, guid: 559f8f265346bb0429933dfd5eee3805, type: 3}
       propertyPath: software.Array.size
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1118468900192098307, guid: 559f8f265346bb0429933dfd5eee3805, type: 3}
       propertyPath: dataSources.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118468900192098307, guid: 559f8f265346bb0429933dfd5eee3805, type: 3}
+      propertyPath: software.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118468900192098307, guid: 559f8f265346bb0429933dfd5eee3805, type: 3}
+      propertyPath: software.Array.data[1]
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1118468900192098307, guid: 559f8f265346bb0429933dfd5eee3805, type: 3}
       propertyPath: dataSources.Array.data[0]
@@ -15292,9 +15324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c66c292fcfef1dc498c75cb76883aac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  info: 'Database Cache
-
-'
+  info: Web Server 2
 --- !u!1001 &1584009838
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16094,15 +16124,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2055949615605657463, guid: 4de234c9b07e7d74fa18430cd1f37516, type: 3}
       propertyPath: hardware.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2055949615605657463, guid: 4de234c9b07e7d74fa18430cd1f37516, type: 3}
       propertyPath: software.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2055949615605657463, guid: 4de234c9b07e7d74fa18430cd1f37516, type: 3}
       propertyPath: dataSources.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055949615605657463, guid: 4de234c9b07e7d74fa18430cd1f37516, type: 3}
+      propertyPath: hardware.Array.data[0]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055949615605657463, guid: 4de234c9b07e7d74fa18430cd1f37516, type: 3}
+      propertyPath: software.Array.data[0]
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2227785522970923552, guid: 4de234c9b07e7d74fa18430cd1f37516, type: 3}
       propertyPath: m_Enabled
@@ -16233,7 +16271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c66c292fcfef1dc498c75cb76883aac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  info: Internet Gateway
+  info: Web Server 2
 --- !u!4 &1771697300 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1175574273613369320, guid: 1bb7642ebf8d0a34aa23fc586ea87e6a, type: 3}
@@ -16899,15 +16937,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2055949615605657463, guid: 4de234c9b07e7d74fa18430cd1f37516, type: 3}
       propertyPath: hardware.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2055949615605657463, guid: 4de234c9b07e7d74fa18430cd1f37516, type: 3}
       propertyPath: software.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2055949615605657463, guid: 4de234c9b07e7d74fa18430cd1f37516, type: 3}
       propertyPath: dataSources.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055949615605657463, guid: 4de234c9b07e7d74fa18430cd1f37516, type: 3}
+      propertyPath: hardware.Array.data[0]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055949615605657463, guid: 4de234c9b07e7d74fa18430cd1f37516, type: 3}
+      propertyPath: software.Array.data[0]
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2055949615605657463, guid: 4de234c9b07e7d74fa18430cd1f37516, type: 3}
       propertyPath: dataSources.Array.data[0]
@@ -17061,7 +17107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c66c292fcfef1dc498c75cb76883aac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  info: NAT Gateway - Private
+  info: Web Server 2
 --- !u!4 &1806243055 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6646835741119708114, guid: e19d4403b142ccc458852024f4efedfd, type: 3}
@@ -18229,15 +18275,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1118468900192098307, guid: 559f8f265346bb0429933dfd5eee3805, type: 3}
       propertyPath: hardware.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1118468900192098307, guid: 559f8f265346bb0429933dfd5eee3805, type: 3}
       propertyPath: software.Array.size
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1118468900192098307, guid: 559f8f265346bb0429933dfd5eee3805, type: 3}
       propertyPath: dataSources.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118468900192098307, guid: 559f8f265346bb0429933dfd5eee3805, type: 3}
+      propertyPath: software.Array.data[1]
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2457854734221986661, guid: 559f8f265346bb0429933dfd5eee3805, type: 3}
       propertyPath: m_IsTrigger
@@ -18400,7 +18450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c66c292fcfef1dc498c75cb76883aac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  info: Web Server 1
+  info: Web Server 2
 --- !u!1001 &1923976612
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18414,15 +18464,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2055949615605657463, guid: 4de234c9b07e7d74fa18430cd1f37516, type: 3}
       propertyPath: hardware.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2055949615605657463, guid: 4de234c9b07e7d74fa18430cd1f37516, type: 3}
       propertyPath: software.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2055949615605657463, guid: 4de234c9b07e7d74fa18430cd1f37516, type: 3}
       propertyPath: dataSources.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055949615605657463, guid: 4de234c9b07e7d74fa18430cd1f37516, type: 3}
+      propertyPath: hardware.Array.data[0]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055949615605657463, guid: 4de234c9b07e7d74fa18430cd1f37516, type: 3}
+      propertyPath: software.Array.data[0]
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2055949615605657463, guid: 4de234c9b07e7d74fa18430cd1f37516, type: 3}
       propertyPath: dataSources.Array.data[0]
@@ -18572,7 +18630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c66c292fcfef1dc498c75cb76883aac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  info: NAT Gateway - Public
+  info: Web Server 2
 --- !u!1 &1925704297
 GameObject:
   m_ObjectHideFlags: 0
@@ -19291,15 +19349,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1118468900192098307, guid: 559f8f265346bb0429933dfd5eee3805, type: 3}
       propertyPath: hardware.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1118468900192098307, guid: 559f8f265346bb0429933dfd5eee3805, type: 3}
       propertyPath: software.Array.size
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1118468900192098307, guid: 559f8f265346bb0429933dfd5eee3805, type: 3}
       propertyPath: dataSources.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118468900192098307, guid: 559f8f265346bb0429933dfd5eee3805, type: 3}
+      propertyPath: hardware.Array.data[0]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118468900192098307, guid: 559f8f265346bb0429933dfd5eee3805, type: 3}
+      propertyPath: software.Array.data[1]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118468900192098307, guid: 559f8f265346bb0429933dfd5eee3805, type: 3}
+      propertyPath: software.Array.data[2]
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1118468900192098307, guid: 559f8f265346bb0429933dfd5eee3805, type: 3}
       propertyPath: dataSources.Array.data[0]
@@ -19542,7 +19612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c66c292fcfef1dc498c75cb76883aac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  info: Application Server
+  info: Web Server 2
 --- !u!1 &2037309246
 GameObject:
   m_ObjectHideFlags: 0
