@@ -9167,6 +9167,8 @@ MonoBehaviour:
   RController: {fileID: 2724949630621087619}
   LButton: {fileID: 8121059408706678316}
   RButton: {fileID: 8121059408936051202}
+  Horizontal: {fileID: 8121059408426205930}
+  Vertical: {fileID: 8121059408556829998}
 --- !u!114 &2591405126507790746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9184,6 +9186,8 @@ MonoBehaviour:
   RController: {fileID: 2724949630621087619}
   LButton: {fileID: 8121059408706678316}
   RButton: {fileID: 8121059408936051202}
+  Horizontal: {fileID: 8121059408426205930}
+  Vertical: {fileID: 8121059408556829998}
 --- !u!114 &5680287200485862525
 MonoBehaviour:
   m_ObjectHideFlags: 0

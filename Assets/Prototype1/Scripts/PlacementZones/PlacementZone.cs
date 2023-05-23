@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System;
+using Fusion;
 
 public class PlacementZone : MonoBehaviour
 {
@@ -46,6 +47,13 @@ public class PlacementZone : MonoBehaviour
     }
 
     public void SaveToFile()
+    {
+        RPC_Save();
+    }
+
+    [Rpc(RpcSources.All, RpcTargets.All, InvokeLocal = true)]
+
+    private void RPC_Save()
     {
         string time = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
         string scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
