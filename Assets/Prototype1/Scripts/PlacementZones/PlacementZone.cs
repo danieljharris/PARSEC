@@ -8,6 +8,7 @@ public class PlacementZone : MonoBehaviour
 {
     [SerializeField] private string fileName = "PlacementZones.csv";
     [SerializeField] private List<PlacementZonePlaceable> inZone = new List<PlacementZonePlaceable>();
+    [SerializeField] private List<GameObject> savingNotifications;
     void Start()
     {
         CreateFileIfNotExist();
@@ -55,6 +56,8 @@ public class PlacementZone : MonoBehaviour
 
     private void RPC_Save()
     {
+        SavingNotification();
+
         string time = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
         string scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
         string zone = gameObject.name;
@@ -72,5 +75,21 @@ public class PlacementZone : MonoBehaviour
             sw.WriteLine($"{time}, {scene}, {zone}, {objectName}, {validity}");
         }
         sw.Close();
+    }
+
+    private void SavingNotification()
+    {
+        foreach(GameObject notification in savingNotifications)
+        {
+            notification.SetActive(true);
+        }
+        Invoke(nameof(DisableSavingNotification), 2f);
+    }
+    private void DisableSavingNotification()
+    {
+        foreach(GameObject notification in savingNotifications)
+        {
+            notification.SetActive(false);
+        }
     }
 }
