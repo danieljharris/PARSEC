@@ -12,12 +12,18 @@ public class PlacementZone : MonoBehaviour
         CreateFileIfNotExist();
     }
 
+    private string GetPath()
+    {
+        // string path = Application.dataPath + "/" + fileName; // PC
+        string path = Application.persistentDataPath + "/" + fileName; // Quest
+        return path;
+    }
+
     void CreateFileIfNotExist()
     {
-        string path = Application.dataPath + "/" + fileName;
-        if(!File.Exists(path))
+        if(!File.Exists(GetPath()))
         {
-            StreamWriter sw = File.CreateText(path);
+            StreamWriter sw = File.CreateText(GetPath());
             string header = "Time, Scene, Zone, Object, Validity";
             sw.WriteLine(header);   
             sw.Close();         
@@ -45,8 +51,7 @@ public class PlacementZone : MonoBehaviour
         string scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
         string zone = gameObject.name;
 
-        string path = Application.dataPath + "/" + fileName;
-        StreamWriter sw = File.AppendText(path);
+        StreamWriter sw = File.AppendText(GetPath());
         for(int i = 0; i < inZone.Count; i++)
         {
             string objectName = inZone[i].gameObject.name;
