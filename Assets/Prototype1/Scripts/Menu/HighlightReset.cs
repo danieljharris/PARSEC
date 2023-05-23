@@ -12,21 +12,23 @@ public class HighlightReset : MonoBehaviour
     {
         Presenter.onPresenterChanged += removeAllFilters;
 
-        NodeList nodeList = GameObject.FindWithTag("Network")?.GetComponent<NodeList>();
-        if (nodeList == null)
-        {
-            Debug.Log("Network/NodeList not found");
-            return;
-        }
+        GameObject[] networks = GameObject.FindGameObjectsWithTag("Network");
+        if (networks.Length == 0) Debug.Log("No network found");
 
-        switch (resetType)
+        foreach (GameObject network in networks)
         {
-            case Ware:
-                nodeList.WareReset = this;
-                break;
-            case Attack:
-                nodeList.AttackReset = this;
-                break;
+            NodeList nodeList = network.GetComponent<NodeList>();
+            if (nodeList == null) continue;
+            
+            switch (resetType)
+            {
+                case Ware:
+                    nodeList.WareReset = this;
+                    break;
+                case Attack:
+                    nodeList.AttackReset = this;
+                    break;
+            }
         }
     }
     
