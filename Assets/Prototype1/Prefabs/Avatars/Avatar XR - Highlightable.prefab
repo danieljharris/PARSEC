@@ -9147,6 +9147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73b2a562c35b05d4c90f2eaf0a3ce0bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _zeroTransformScale: {fileID: 2724949630759382797}
   ResettableObjects:
   - {fileID: 2724949629113838144}
 --- !u!114 &2136249539605595045

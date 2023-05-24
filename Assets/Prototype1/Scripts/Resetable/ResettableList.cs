@@ -1,9 +1,11 @@
+using System.Collections;
 using System.Collections.Generic;
 using Fusion;
 using UnityEngine;
 
 public class ResettableList : MonoBehaviour
 {
+    [SerializeField] Transform _zeroTransformScale;
     public List<GameObject> ResettableObjects = new List<GameObject>();
     private List<(GameObject, Vector3, Quaternion)> _resettableObjectsOrigins = new List<(GameObject, Vector3, Quaternion)>();
     void Start()
@@ -13,6 +15,8 @@ public class ResettableList : MonoBehaviour
     }
     public void ResetTransform()
     {
+        _zeroTransformScale.localScale = Vector3.one;
+
         NetworkObject netObj = GetComponent<NetworkObject>();
         if(netObj == null || !netObj.HasInputAuthority || !netObj.HasStateAuthority) 
         {
