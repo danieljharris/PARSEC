@@ -5,6 +5,7 @@ public class MoveGesture : SingleHandGesture
 {
     [SerializeField] Transform Avatar, LController, RController; // Avatar + Controllers
     [SerializeField] BooleanAction LButton,  RButton; // Button Actions
+    [SerializeField] FloatAction Horizontal, Vertical; // Joystick Actions - used to disable scaling when moving
 
     private Vector3 InitialAvatarPosition, InitialControllerPosition;
 
@@ -12,6 +13,7 @@ public class MoveGesture : SingleHandGesture
     // Gesture Overrides
     public override bool LeftButton() => LButton.Value;
     public override bool RightButton() => RButton.Value;
+    public override bool Trigger() => (LeftButton() ^ RightButton()) && Horizontal.Value == 0 && Vertical.Value == 0;
     public override void StartGesture()
     {
         base.StartGesture();

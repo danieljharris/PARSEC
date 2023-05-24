@@ -2,22 +2,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System;
+using Fusion;
 
 public class PlacementZone : MonoBehaviour
 {
     [SerializeField] private string fileName = "PlacementZones.csv";
     [SerializeField] private List<PlacementZonePlaceable> inZone = new List<PlacementZonePlaceable>();
+    [SerializeField] private List<GameObject> savingNotifications;
     void Start()
     {
         CreateFileIfNotExist();
     }
 
+    private string GetPath()
+    {
+        // string path = Application.dataPath + "/" + fileName; // PC
+        string path = Application.persistentDataPath + "/" + fileName; // Quest
+        return path;
+    }
+
     void CreateFileIfNotExist()
     {
-        string path = Application.dataPath + "/" + fileName;
-        if(!File.Exists(path))
+        if(!File.Exists(GetPath()))
         {
-            StreamWriter sw = File.CreateText(path);
+            StreamWriter sw = File.CreateText(GetPath());
             string header = "Time, Scene, Zone, Object, Validity";
             sw.WriteLine(header);   
             sw.Close();         
@@ -41,12 +49,20 @@ public class PlacementZone : MonoBehaviour
 
     public void SaveToFile()
     {
+        RPC_Save();
+    }
+
+    [Rpc(RpcSources.All, RpcTargets.All, InvokeLocal = true)]
+
+    private void RPC_Save()
+    {
+        SavingNotification();
+
         string time = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
         string scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
         string zone = gameObject.name;
 
-        string path = Application.dataPath + "/" + fileName;
-        StreamWriter sw = File.AppendText(path);
+        StreamWriter sw = File.AppendText(GetPath());
         for(int i = 0; i < inZone.Count; i++)
         {
             string objectName = inZone[i].gameObject.name;
@@ -59,5 +75,21 @@ public class PlacementZone : MonoBehaviour
             sw.WriteLine($"{time}, {scene}, {zone}, {objectName}, {validity}");
         }
         sw.Close();
+    }
+
+    private void SavingNotification()
+    {
+        foreach(GameObject notification in savingNotifications)
+        {
+            notification.SetActive(true);
+        }
+        Invoke(nameof(DisableSavingNotification), 2f);
+    }
+    private void DisableSavingNotification()
+    {
+        foreach(GameObject notification in savingNotifications)
+        {
+            notification.SetActive(false);
+        }
     }
 }

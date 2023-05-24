@@ -53,6 +53,7 @@ public class Node : MonoBehaviour
         // Get the object that has the outline effect and remove it. 
         GameObject applyHighlightTo = transform.Find("Visuals")?.gameObject;
         if (applyHighlightTo == null) applyHighlightTo = this.gameObject;
+
         Outline outline = applyHighlightTo.GetComponent<Outline>();
         if (outline == null) return;
 
@@ -76,8 +77,10 @@ public class Node : MonoBehaviour
         if (!highlighted) return;
         highlighted = false;
 
-        // Get the object that has the outline effect and remove it. 
-        GameObject applyHighlightTo = transform.Find("Visuals").gameObject;
+        // Get the object that has the outline effect and remove it
+        GameObject applyHighlightTo = transform.Find("Visuals")?.gameObject;
+        if (applyHighlightTo == null) applyHighlightTo = this.gameObject;
+
         Outline outline = applyHighlightTo.GetComponent<Outline>();
         if (outline == null) return;
 

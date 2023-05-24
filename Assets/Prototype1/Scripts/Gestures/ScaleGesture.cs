@@ -6,13 +6,14 @@ public class ScaleGesture : Gesture
 {
     [SerializeField] Transform Avatar, Headset, LController, RController; // Avatar + Headset + Controllers
     [SerializeField] BooleanAction LButton,  RButton; // Button Actions
+    [SerializeField] FloatAction Horizontal, Vertical; // Joystick Actions - used to disable scaling when moving
 
     private float InitialDistance;
     private Vector3 InitialScale;
 
 
     // Gesture Overrides
-    public override bool Trigger() => LButton.Value && RButton.Value;
+    public override bool Trigger() => LButton.Value && RButton.Value && Horizontal.Value == 0 && Vertical.Value == 0;
     public override void StartGesture()
     {
         InitialDistance = ControllerSpreadDistance();
