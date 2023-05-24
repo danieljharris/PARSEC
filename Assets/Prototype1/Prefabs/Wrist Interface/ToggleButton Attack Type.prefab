@@ -267,7 +267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4777e9e301ad2d147b45f1e6511c377b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  presenter: {fileID: 0}
   attackType: 0
 --- !u!114 &1509081170941852939
 MonoBehaviour:
@@ -698,7 +698,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2567771370851856168}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.501}
+  m_LocalPosition: {x: 0, y: 0, z: -0.63500005}
   m_LocalScale: {x: 0.1, y: 0.39999998, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1197,7 +1197,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5306229286264767311}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.501}
+  m_LocalPosition: {x: 0, y: 0, z: -0.635}
   m_LocalScale: {x: 0.1, y: 0.39999998, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1577,7 +1577,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7911012207192104309}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.501}
+  m_LocalPosition: {x: 0, y: 0, z: -0.6350001}
   m_LocalScale: {x: 0.1, y: 0.39999998, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1827,7 +1827,7 @@ PrefabInstance:
     - target: {fileID: 127534091832244386, guid: 9d64e3992d6411d4a9ab6c50374f3971, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cbbcaec889cc0724a9243e5fe8012626, type: 2}
+      objectReference: {fileID: 2100000, guid: 44d57f528077b604ab33a9e1e6d18d07, type: 2}
     - target: {fileID: 127534092054235264, guid: 9d64e3992d6411d4a9ab6c50374f3971, type: 3}
       propertyPath: m_Name
       value: Indicators.SpatialTargets.Target
