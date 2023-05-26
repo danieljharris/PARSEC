@@ -1,4 +1,6 @@
-# Quest Setup Tutorial
+# Quest 1 & 2 Setup Tutorial
+
+<img height="400" src=https://github.com/danieljharris/PARSEC/assets/1362512/26ca3d21-2a6e-4814-9f95-799bbe85b0fb>
 
 ### Download PARSEC (1 minute)
 1) Go to: https://github.com/danieljharris/PARSEC/releases
@@ -18,6 +20,8 @@
 ### Install PARSEC (3 minutes)
 1) Connect Quest to PC via USB cable
 2) In SideQuest: Click in the top right "Install APK file from folder on computer."
+<img width="300" alt="SideQuest" src="https://github.com/danieljharris/PARSEC/assets/1362512/77bc3948-8d17-4998-a7a0-4806ad4c9dab">
+
 3) Select the downloaded "Quest.apk" file
 
 ### Launch PARSEC (1 minute)
