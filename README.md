@@ -63,5 +63,47 @@ PARSEC can also be used outside of cyber security and has the following porentia
 ### Object Detail Inspection<br/>
 <img height="200" src=https://user-images.githubusercontent.com/1362512/176456538-3b3cb58d-514a-42c3-9d84-f87d230a26f8.jpg>
 
+### Ability to scale down and look inside network services for additional information<br/>
+<img height="200" src=https://github.com/danieljharris/PARSEC/assets/1362512/d5461d04-a27d-4a11-b1e7-fd463a07d628>
+<img height="200" src=https://github.com/danieljharris/PARSEC/assets/1362512/10642978-d4d1-4fae-9733-793f59523f76>
+
 ### Reset Buttons - Scene Reset & Player Reset<br/>
 <img height="200" src=https://user-images.githubusercontent.com/1362512/176455894-386215ac-82cd-4b31-88ef-599e45364b34.png>
+
+# Scenes / Areas
+## Tutorial
+
+Explains all controls, gestures, and interaction mechanics
+
+<img height="200" src=https://github.com/danieljharris/PARSEC/assets/1362512/bbdbb63e-f780-4598-ad2d-c550fcf87eef>
+<img height="200" src=https://github.com/danieljharris/PARSEC/assets/1362512/cad821c7-97f5-4d13-9a88-e834ad0972c7>
+
+## 🗣️ Knowledge Transfer / Education 🗣️
+Use cases:
+- Interactive Teaching Environment
+- Zero-Day Impact Communication
+
+Overview and connections:
+
+<img height="200" src=https://github.com/danieljharris/PARSEC/assets/1362512/267fb112-ed7d-43f4-9975-00a230bcf28c>
+
+Additional information inside network objects:
+
+<img height="200" src=https://github.com/danieljharris/PARSEC/assets/1362512/e9257588-4167-42de-a181-779b08cffe6d>
+
+## 🤝 Collaboration 🤝
+Use cases:
+- VR Cloud Explorer
+- Threat Risk Assessment
+
+<img height="200" src=https://github.com/danieljharris/PARSEC/assets/1362512/4380f2dd-3e4d-4369-b7a2-864695dd555c>
+
+
+## 💼 Independent Tasks 💼
+Use cases:
+- Threat Coverage Visualiser
+- Library Dependency Visualisation
+
+<img height="200" src=https://github.com/danieljharris/PARSEC/assets/1362512/a7e6848d-b5f8-457e-9ec9-fc0ebda7382a>
+
+
