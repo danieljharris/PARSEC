@@ -1,6 +1,6 @@
-# Quest 1 & 2 Setup Tutorial
+# Unity Setup Tutorial
 
-<!-- <img height="400" src=https://github.com/danieljharris/PARSEC/assets/1362512/26ca3d21-2a6e-4814-9f95-799bbe85b0fb> -->
+<img height="400" alt="Unity_Wd617dyGPv" src="https://github.com/danieljharris/PARSEC/assets/1362512/3178d33e-1ee0-4319-98d9-a5f20f85a4ff">
 
 ### Download PARSEC (1 minute)
 1) Go to: https://github.com/danieljharris/PARSEC/releases
@@ -26,3 +26,7 @@
     - Click "Continue" and follow the prompts to accept and install
 5) Go back to "Projects" tab
 6) Select PARSEC
+
+### Load Scene
+1) Go to: Assets/Prototype1/Scenes/
+2) Select "Combined"
