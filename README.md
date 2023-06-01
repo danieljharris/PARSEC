@@ -21,6 +21,11 @@ PARSEC can also be used outside of cyber security and has the following porentia
 - Wand Models ([Frost Forged](https://assetstore.unity.com/packages/3d/props/weapons/3d-items-free-wand-pack-46225))
 - Highlight Effect ([Chris Nolet](https://assetstore.unity.com/packages/tools/particles-effects/quick-outline-115488))
 
+# Setup
+To use PARSEC please use the documented tutorials:
+- [Quest Setup]()
+- [Unity Setup]()
+
 # Features
 ### Overview
 - Supports both local and remote multiplayer
