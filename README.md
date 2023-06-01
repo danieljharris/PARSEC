@@ -23,8 +23,8 @@ PARSEC can also be used outside of cyber security and has the following porentia
 
 # Setup
 To use PARSEC please use the documented tutorials:
-- [Quest Setup]()
-- [Unity Setup]()
+- [Quest Setup](https://github.com/danieljharris/PARSEC/blob/main/Documentation/Quest%20Setup.md)
+- [Unity Setup](https://github.com/danieljharris/PARSEC/blob/main/Documentation/Unity%20Setup.md)
 
 # Features
 ### Overview
