@@ -9,7 +9,7 @@ using System;
 // C# 9.0 workaround for Unity .NET 5
 namespace System.Runtime.CompilerServices { internal static class IsExternalInit {}}
 
-public class NodeSpecs : MonoBehaviour
+public class NodeSpecs : NetworkBehaviour
 {
     public List<Software>   software    = new List<Software>();
     public List<Hardware>   hardware    = new List<Hardware>();
@@ -166,8 +166,10 @@ public class NodeSpecs : MonoBehaviour
 
     [Rpc(RpcSources.All, RpcTargets.All, InvokeLocal = true)]
     public void RPC_Highlight(Color color, bool force = false) => GetNode().Highlight(color, force);
+
     [Rpc(RpcSources.All, RpcTargets.All, InvokeLocal = true)]
     public void RPC_UnHighlight(Color color) => GetNode().UnHighlight(color);
+    
     [Rpc(RpcSources.All, RpcTargets.All, InvokeLocal = true)]
     public void RPC_UnHighlight() => GetNode().UnHighlight();
 }

@@ -246,6 +246,8 @@ MonoBehaviour:
   consumerRigidbody: {fileID: 4755202766606164951}
   collisionNotifier: {fileID: 4947383594716320290}
   meshContainer: {fileID: 2930035444763572935}
+  addCollisionExtractor: {fileID: 0}
+  removeCollisionExtractor: {fileID: 0}
   activeCollisions: {fileID: 4299121659064821840}
   touchConfiguration: {fileID: 1672997095601824966}
   grabConfiguration: {fileID: 693874516136349907}
@@ -497,6 +499,7 @@ MonoBehaviour:
       m_Calls: []
   grabType: 0
   grabProviderIndex: 0
+  attemptSwapSecondaryForPrimaryOnPrimaryDrop: 0
 --- !u!54 &4755202766606164951
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -626,6 +629,8 @@ MonoBehaviour:
     RotBlendStart: 0.1
     RotBlendEnd: 0.5
     RotTeleportRadians: 1.5
+  UseLegacySharedModeInterpolation: 0
+  TargetInterpolationDelay: 0.03
 --- !u!114 &4252126948062697251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -650,6 +655,7 @@ MonoBehaviour:
   NetworkedBehaviours:
   - {fileID: 4252126948062697249}
   - {fileID: 4252126948062697248}
+  - {fileID: 3902046475986657336}
   SimulationBehaviours: []
 --- !u!114 &6838172799312605222
 MonoBehaviour:
@@ -663,6 +669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec531eceee7f6d47a23773acb092f2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  presenter: {fileID: 0}
 --- !u!114 &3902046475986657336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -675,7 +682,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d38ab4a7c5da3a4386fac46b8da0828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _interpolationDataSource: 0
+  presenter: {fileID: 0}
   AttachedToMenu: 1
+  OnPickup:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8100867783581875389
 GameObject:
   m_ObjectHideFlags: 0

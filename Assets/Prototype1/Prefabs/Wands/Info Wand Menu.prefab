@@ -566,6 +566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a2b7bed8df7a4c44bea120d4ab728b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isEnabled: 1
   infoPanel: {fileID: 4650989219385110078}
   infoPanelText: {fileID: 8298683842544167072}
 --- !u!1 &4650989219385110078
@@ -888,6 +889,7 @@ MonoBehaviour:
   NetworkedBehaviours:
   - {fileID: 5234402933456651718}
   - {fileID: 5234402933456651717}
+  - {fileID: 4832809789782030050}
   SimulationBehaviours: []
 --- !u!114 &802387857538277447
 MonoBehaviour:
@@ -914,6 +916,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d38ab4a7c5da3a4386fac46b8da0828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _interpolationDataSource: 0
+  presenter: {fileID: 0}
   AttachedToMenu: 1
   OnPickup:
     m_PersistentCalls:
@@ -929,21 +933,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
-        m_CallState: 2
-  OnPutBack:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3480970149009765610}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &8323298735991413933
 GameObject:

@@ -103,6 +103,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5198039904598150848}
+  - component: {fileID: 3699787971269441053}
   - component: {fileID: 6530319479992530908}
   m_Layer: 2
   m_Name: WirstMenu
@@ -132,6 +133,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3699787971269441053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5140486029457825992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectInterest: 1
+  DefaultInterestGroups: []
+  DestroyWhenStateAuthorityLeaves: 0
+  AllowStateAuthorityOverride: 1
+  AoiPositionSource: {fileID: 0}
+  Flags: 2305
+  NetworkGuid:
+    RawGuidValue: 5c6eb814cd5eac748866d1d016254ccf
+  NestedObjects:
+  - {fileID: 8443325595229124917}
+  - {fileID: 7431227694565945336}
+  NetworkedBehaviours: []
+  SimulationBehaviours: []
 --- !u!114 &6530319479992530908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,7 +176,6 @@ MonoBehaviour:
   - {fileID: 8020590883713281294}
   - {fileID: 8665904169825981073}
   - {fileID: 2307952936428421278}
-  - {fileID: 7188728696006774193}
   presenter: {fileID: 0}
 --- !u!1001 &40191812714698201
 PrefabInstance:
@@ -507,8 +532,48 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7471414653845305889, guid: 57696cf04cf20d9418fdf863174fa279, type: 3}
+      propertyPath: Flags
+      value: 3073
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471414653845305889, guid: 57696cf04cf20d9418fdf863174fa279, type: 3}
+      propertyPath: NetworkedBehaviours.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471414653845305889, guid: 57696cf04cf20d9418fdf863174fa279, type: 3}
+      propertyPath: NetworkedBehaviours.Array.data[2]
+      value: 
+      objectReference: {fileID: 7824095526246898910}
+    - target: {fileID: 7471414653845305889, guid: 57696cf04cf20d9418fdf863174fa279, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471414653845305889, guid: 57696cf04cf20d9418fdf863174fa279, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7667952844009689041, guid: 57696cf04cf20d9418fdf863174fa279, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8476475821591457004, guid: 57696cf04cf20d9418fdf863174fa279, type: 3}
+      propertyPath: Flags
+      value: 3073
+      objectReference: {fileID: 0}
+    - target: {fileID: 8476475821591457004, guid: 57696cf04cf20d9418fdf863174fa279, type: 3}
+      propertyPath: NetworkedBehaviours.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8476475821591457004, guid: 57696cf04cf20d9418fdf863174fa279, type: 3}
+      propertyPath: NetworkedBehaviours.Array.data[2]
+      value: 
+      objectReference: {fileID: 8168586385618024040}
+    - target: {fileID: 8476475821591457004, guid: 57696cf04cf20d9418fdf863174fa279, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8476475821591457004, guid: 57696cf04cf20d9418fdf863174fa279, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[1]
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8936082629963348343, guid: 57696cf04cf20d9418fdf863174fa279, type: 3}
@@ -537,6 +602,50 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 212cb6d15f94292479c82ae5ad0aac5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7431227694565945336 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7471414653845305889, guid: 57696cf04cf20d9418fdf863174fa279, type: 3}
+  m_PrefabInstance: {fileID: 40191812714698201}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7824095526246898910 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7789555346008590599, guid: 57696cf04cf20d9418fdf863174fa279, type: 3}
+  m_PrefabInstance: {fileID: 40191812714698201}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d38ab4a7c5da3a4386fac46b8da0828, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8168586385618024040 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8201736844009251761, guid: 57696cf04cf20d9418fdf863174fa279, type: 3}
+  m_PrefabInstance: {fileID: 40191812714698201}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d38ab4a7c5da3a4386fac46b8da0828, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8443325595229124917 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8476475821591457004, guid: 57696cf04cf20d9418fdf863174fa279, type: 3}
+  m_PrefabInstance: {fileID: 40191812714698201}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1325055127556404724
@@ -802,7 +911,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 545012420004799593, guid: b0ec24f059879934ea9af63c56ae26c2, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1660412642215762001, guid: b0ec24f059879934ea9af63c56ae26c2, type: 3}
       propertyPath: m_Materials.Array.data[0]

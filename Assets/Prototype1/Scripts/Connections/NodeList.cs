@@ -65,7 +65,7 @@ public class NodeList : MonoBehaviour
         foreach (NodeSpecs specs in nodeSpecs)
             specs.ApplyFilter(isPresenter, attackTypeFilters);
     }
-    private void clearHighlighting(bool isPresenter, bool force = false)
+    public void clearHighlighting(bool isPresenter = false, bool force = false)
     {
         highlightType = NotSet;
 

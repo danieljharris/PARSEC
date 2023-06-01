@@ -707,6 +707,7 @@ MonoBehaviour:
   NetworkedBehaviours:
   - {fileID: 8329417631632791373}
   - {fileID: 8329417631632791375}
+  - {fileID: 8329417631497971041}
   SimulationBehaviours: []
 --- !u!114 &8329417631632791375
 MonoBehaviour:
@@ -2671,6 +2672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 634f7fe11f3ec584e916d37f2493682d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _interpolationDataSource: 0
   software: 
   hardware: 
   dataSources: 

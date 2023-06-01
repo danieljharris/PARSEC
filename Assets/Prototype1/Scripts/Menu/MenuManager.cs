@@ -1,6 +1,7 @@
+using Fusion;
+using UnityEngine;
 using System.Collections.Generic;
 using Zinnia.Action;
-using UnityEngine;
 
 public class MenuManager : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class MenuManager : MonoBehaviour
     private bool MenuShown = false;
     private bool MenuButtonHeld = false;
     private bool MenuDisabled = false;
+    private bool isRemotePlayer = false;
 
     void Start()
     {
@@ -22,7 +24,7 @@ public class MenuManager : MonoBehaviour
 
     void Update()
     {
-        if(MenuDisabled) return;
+        if (isRemotePlayer || MenuDisabled) return;
 
         // Deals with menu button being held down
         if(MenuButton.Value && MenuButtonHeld) return;
@@ -36,14 +38,19 @@ public class MenuManager : MonoBehaviour
         {
             MenuButtonHeld = true;
             if(!MenuShown)
+            {
                 Show(menus[0]);
+            }
             else
+            {
                 Hide();
+            }
         }
     }
 
-    private void Show(Menu menu)
+    private void Show(Menu menu = null)
     {
+
         MenuShown = true;
         CurrentMenu = menu;
         CurrentMenu.transform.localScale = new Vector3(0.400000006f, 0.400000006f, 0.00499999989f);
@@ -63,6 +70,10 @@ public class MenuManager : MonoBehaviour
         CurrentMenu.transform.localScale = new Vector3(0.400000006f, 0.400000006f, 0.00499999989f);
     }
 
+    public void SetRemotePlayer(bool isRemote)
+    {
+        isRemotePlayer = isRemote;
+    }
     public void OnPresenterChanged()
     {
         // If another user is the presenter, disable the menu

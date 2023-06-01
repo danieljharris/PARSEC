@@ -8,6 +8,8 @@ public abstract class MenuHighlighting : MonoBehaviour
     
     void Start()
     {
+        Presenter.onPresenterChanged += OnPresenterChanged;
+
         GameObject[] networks = GameObject.FindGameObjectsWithTag("Network");
         if (networks.Length == 0) Debug.Log("No network found");
 
@@ -21,4 +23,12 @@ public abstract class MenuHighlighting : MonoBehaviour
 
     public abstract void addFilter();
     public abstract void removeFilter();
+
+    protected void OnPresenterChanged()
+    {
+        foreach (NodeList nodeList in nodeLists)
+        {
+            nodeList.clearHighlighting();
+        }
+    }
 }
