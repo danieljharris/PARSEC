@@ -24,7 +24,7 @@ public class NetworkAvatar : NetworkBehaviour
 #region Local
     private void LocalLateUpdate()
     {
-        Debug.Log("LocalLateUpdate");
+        // Debug.Log("LocalLateUpdate");
 
         float elapsedTime = Time.time - cycleStartTime;
         if (elapsedTime <= intervalToSendData) return;
@@ -35,12 +35,12 @@ public class NetworkAvatar : NetworkBehaviour
 
     void RecordAndSendStreamData()
     {
-        Debug.Log("Recording stream data");
+        // Debug.Log("Recording stream data");
         
         byte[] bytes = Avatar.RecordStreamData(Avatar.activeStreamLod);
         if (bytes == null) return;
 
-        Debug.Log("Sending stream data");
+        // Debug.Log("Sending stream data");
         RPC_ReceiveStreamData(bytes);
     }
 #endregion
@@ -49,29 +49,29 @@ public class NetworkAvatar : NetworkBehaviour
     [Rpc(RpcSources.All, RpcTargets.All, InvokeLocal = false)]
     public void RPC_ReceiveStreamData(byte[] bytes)
     {
-        Debug.Log("Receiving stream data---------------------------------------");
+        // Debug.Log("Receiving stream data---------------------------------------");
         if(streamedDataList == null) streamedDataList = new List<byte[]>();
-        Debug.Log("Adding stream data to list");
+        // Debug.Log("Adding stream data to list");
         streamedDataList.Add(bytes);
-        Debug.Log("Stream data added to list");
+        // Debug.Log("Stream data added to list");
     }
     private void RemoteUpdate()
     {
-        Debug.Log("RemoteUpdate");
+        // Debug.Log("RemoteUpdate");
         if (streamedDataList.Count == 0) return;
 
-        Debug.Log("Applying stream data");
+        // Debug.Log("Applying stream data");
 
         byte[] firstBytesInList = streamedDataList[0];
-        Debug.Log("First bytes in list: " + firstBytesInList);
+        // Debug.Log("First bytes in list: " + firstBytesInList);
         if (firstBytesInList != null)
         {
-            Debug.Log("Applying stream data");
+            // Debug.Log("Applying stream data");
             Avatar.ApplyStreamData(firstBytesInList);
         }
-        Debug.Log("Removing stream data from list");
+        // Debug.Log("Removing stream data from list");
         streamedDataList.RemoveAt(0);
-        Debug.Log("Stream data removed from list");
+        // Debug.Log("Stream data removed from list");
     }
 #endregion
 }
