@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Prototype1/Scenes/Meta Avatars.unity
+    guid: 84150a9f82d51474a9f61fd255ac8247
+  - enabled: 0
     path: Assets/Prototype1/Scenes/Combined.unity
     guid: a508b84900df20d41b509a82b730ff29
   - enabled: 0

@@ -9,10 +9,12 @@
     }
   ],
   "dependencies": {
+    "com.unity.editorcoroutines": "1.0.0",
     "com.unity.ide.vscode": "1.2.5",
     "com.unity.nuget.mono-cecil": "1.10.2",
+    "com.unity.test-framework": "1.1.33",
     "com.unity.textmeshpro": "3.0.6",
-    "com.unity.xr.openxr": "1.7.0",
+    "com.unity.xr.oculus": "3.3.0",
     "io.extendreality.tilia.camerarigs.spatialsimulator.unity": "2.2.6",
     "io.extendreality.tilia.camerarigs.trackedalias.unity": "2.4.4",
     "io.extendreality.tilia.camerarigs.xrpluginframework.unity": "2.1.8",
@@ -21,6 +23,7 @@
     "io.extendreality.tilia.interactions.interactables.unity": "2.16.2",
     "io.extendreality.tilia.interactions.spatialbuttons.unity": "2.3.11",
     "io.extendreality.tilia.locomotors.axismove.unity": "2.0.35",
+    "io.extendreality.tilia.sdk.oculusintegration.unity": "2.3.4",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
