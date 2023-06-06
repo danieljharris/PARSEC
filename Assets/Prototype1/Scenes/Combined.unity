@@ -35524,7 +35524,7 @@ PrefabInstance:
     - target: {fileID: 1328261037738135416, guid: 3bb36be9ee9cc664d9a5644921fa146f, type: 3}
       propertyPath: _playerPrefab
       value: 
-      objectReference: {fileID: 1912014509141183585, guid: 1326e052bd0f4c5418cba7a4122f1fd8, type: 3}
+      objectReference: {fileID: 1912014509141183585, guid: 90d4c692554cee942b7d72d6b021f996, type: 3}
     - target: {fileID: 1328261037738135421, guid: 3bb36be9ee9cc664d9a5644921fa146f, type: 3}
       propertyPath: _SessionName
       value: PARSEC
