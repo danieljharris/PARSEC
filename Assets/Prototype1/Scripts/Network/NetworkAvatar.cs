@@ -7,71 +7,55 @@ public class NetworkAvatar : NetworkBehaviour
 {
     [SerializeField] public OvrAvatarEntity Avatar;
     [SerializeField] public bool isLocal = true;
-    private List<byte[]> streamedDataList = new List<byte[]>();
-    private float cycleStartTime = 0;
-    private float intervalToSendData = 0.08f;
-
-    void Update()
-    {
-        if (!isLocal) RemoteUpdate();
-    }
+    private float cycleStartTime_Local = 0;
+    private float intervalToSendData_Local = 0.08f;
+    private List<byte[]> streamedDataList_Remote = new List<byte[]>();
 
     void LateUpdate()
     {
         if (isLocal) LocalLateUpdate();
     }
+    void Update()
+    {
+        if (!isLocal) RemoteUpdate();
+    }
 
-#region Local
+#region Local Functions
     private void LocalLateUpdate()
     {
-        // Debug.Log("LocalLateUpdate");
-
-        float elapsedTime = Time.time - cycleStartTime;
-        if (elapsedTime <= intervalToSendData) return;
+        float elapsedTime = Time.time - cycleStartTime_Local;
+        if (elapsedTime <= intervalToSendData_Local) return;
 
         RecordAndSendStreamData();
-        cycleStartTime = Time.time;
+        cycleStartTime_Local = Time.time;
     }
 
     void RecordAndSendStreamData()
     {
-        // Debug.Log("Recording stream data");
-        
         byte[] bytes = Avatar.RecordStreamData(Avatar.activeStreamLod);
         if (bytes == null) return;
 
-        // Debug.Log("Sending stream data");
         RPC_ReceiveStreamData(bytes);
     }
 #endregion
 
-#region Remote
+#region Remote Functions
     [Rpc(RpcSources.All, RpcTargets.All, InvokeLocal = false)]
     public void RPC_ReceiveStreamData(byte[] bytes)
     {
-        // Debug.Log("Receiving stream data---------------------------------------");
-        if(streamedDataList == null) streamedDataList = new List<byte[]>();
-        // Debug.Log("Adding stream data to list");
-        streamedDataList.Add(bytes);
-        // Debug.Log("Stream data added to list");
+        streamedDataList_Remote.Add(bytes);
     }
+    
     private void RemoteUpdate()
     {
-        // Debug.Log("RemoteUpdate");
-        if (streamedDataList.Count == 0) return;
+        if (streamedDataList_Remote.Count == 0) return;
 
-        // Debug.Log("Applying stream data");
-
-        byte[] firstBytesInList = streamedDataList[0];
-        // Debug.Log("First bytes in list: " + firstBytesInList);
+        byte[] firstBytesInList = streamedDataList_Remote[0];
         if (firstBytesInList != null)
         {
-            // Debug.Log("Applying stream data");
             Avatar.ApplyStreamData(firstBytesInList);
         }
-        // Debug.Log("Removing stream data from list");
-        streamedDataList.RemoveAt(0);
-        // Debug.Log("Stream data removed from list");
+        streamedDataList_Remote.RemoveAt(0);
     }
 #endregion
 }

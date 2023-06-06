@@ -9332,12 +9332,12 @@ GameObject:
   - component: {fileID: 2724949630759382797}
   - component: {fileID: 2724949630759382796}
   - component: {fileID: 1912014509141183585}
+  - component: {fileID: 8288207813399712320}
   - component: {fileID: 3059867748383223192}
   - component: {fileID: 796077272660226659}
   - component: {fileID: 2136249539605595045}
   - component: {fileID: 2591405126507790746}
   - component: {fileID: 5680287200485862525}
-  - component: {fileID: 8288207813399712320}
   m_Layer: 0
   m_Name: Avatar Meta
   m_TagString: Untagged
@@ -9397,8 +9397,8 @@ MonoBehaviour:
   - {fileID: 6735042780389574979}
   NetworkedBehaviours:
   - {fileID: 1912014509141183585}
-  - {fileID: 3059867748383223192}
   - {fileID: 8288207813399712320}
+  - {fileID: 3059867748383223192}
   - {fileID: 4420840873417421638}
   - {fileID: 3895623536571650557}
   - {fileID: 2776765026038399662}
@@ -9416,14 +9416,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
-  _disableForLocalPlayer:
-  - {fileID: 2724949628959519722}
-  _disableForNetworkPlayer:
-  - {fileID: 8121059408730435373}
-  - {fileID: 9000185725541103329}
-  - {fileID: 173515324923424027}
-  - {fileID: 3048335398630065212}
-  _disableScriptsForNetworkPlayer: []
   onLocalPlayerJoined:
     m_PersistentCalls:
       m_Calls:
@@ -9478,6 +9470,54 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 8121059408730435373}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 9000185725541103329}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 173515324923424027}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3048335398630065212}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _localAvatars:
   - {fileID: 4470276244293486008}
   - {fileID: 897434439210844475}
@@ -9488,7 +9528,21 @@ MonoBehaviour:
   - {fileID: 948135265095683045}
   - {fileID: 6867954854193886806}
   - {fileID: 3571651860398986989}
-  avatar: {fileID: 3109169748754293621}
+--- !u!114 &8288207813399712320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2724949630759382799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7eb7f0eb1cae634b9ee8ab542dea27f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interpolationDataSource: 0
+  Avatar: {fileID: 0}
+  isLocal: 1
 --- !u!114 &3059867748383223192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9578,21 +9632,6 @@ MonoBehaviour:
   RotationCubePrefab: {fileID: 1547574722443877608, guid: 28f077adeff1cad4385934dc2828eb84, type: 3}
   LButton: {fileID: 0}
   RButton: {fileID: 0}
---- !u!114 &8288207813399712320
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2724949630759382799}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7eb7f0eb1cae634b9ee8ab542dea27f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _interpolationDataSource: 0
-  Avatar: {fileID: 0}
-  isLocal: 1
 --- !u!1 &2724949630761154094
 GameObject:
   m_ObjectHideFlags: 0
