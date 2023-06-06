@@ -30,7 +30,8 @@ To use PARSEC please use the documented tutorials:
 # Features
 ### Overview
 - Supports both local and remote multiplayer
-- Built in support for any [OpenXR compatible headset](https://www.khronos.org/conformance/adopters/conformant-products/openxr)
+- Built in support for any [OpenXR compatible headset](https://www.khronos.org/conformance/adopters/conformant-products/openxr) (Builds 1.1 and before)
+- Meta Avatar suppport (Builds 1.2 and above)
 - Unique user perspective scaling movement mechanics
 - Simplified and/or detailed network visualisations to fit the use case
 - Ability to look inside a service to gain additional information about the service
