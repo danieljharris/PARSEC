@@ -56,6 +56,9 @@ To use PARSEC please use the documented tutorials:
   <img height="250" src=https://user-images.githubusercontent.com/1362512/230099178-35f9f430-aa38-434e-9dc5-bf6cdfe0250d.png>
 </p>
 
+### Meta Avatars
+<img height="200" src=https://github.com/danieljharris/PARSEC/assets/1362512/472c8438-10bb-4008-ab4f-8d013e32b318>
+
 ### AWS Network Metaphors
 <img height="200" src=https://user-images.githubusercontent.com/1362512/230085024-c14f0615-5d7a-4311-9cb2-b3bec7da6e3e.png>
 
