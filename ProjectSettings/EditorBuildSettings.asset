@@ -33,7 +33,7 @@ EditorBuildSettings:
     path: Assets/Prototype1/Scenes/Old/Computer Objects.unity
     guid: 6760f163ef06fc4429885d09b10a2394
   - enabled: 0
-    path: Assets/Prototype1/Scenes/Old/Network Example.unity
+    path: Assets/Prototype1/Scenes/Networking Example.unity
     guid: 700bea650e0e42b4387e27f7090b72db
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: c15974c751897c643a62f525128c6933, type: 2}
