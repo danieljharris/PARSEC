@@ -10,8 +10,8 @@
 
 # Impact and Accessibility
 PARSEC can also be used outside of cyber security and has the following porential uses:
-- Pre-configured environment to build any multiplayer VR application (using VRTK v4 + Photon Fusion) [Multiplayer VR Example](https://github.com/danieljharris/PARSEC/blob/main/Documentation/Multiplayer%20VR%20Example.md)
-- Pre-configured environment for multiplayer Meta Avatar (using Meta Avatars + VRTK v4 + Photon Fusion) [Multiplayer Meta Avatar Example](https://github.com/danieljharris/PARSEC/blob/main/Documentation/Multiplayer%20Meta%20Avatar%20Example.md)
+- Pre-configured environment to build any multiplayer VR application (using VRTK v4 + Photon Fusion) </br> [Multiplayer VR Example](https://github.com/danieljharris/PARSEC/blob/main/Documentation/Multiplayer%20VR%20Example.md)
+- Pre-configured environment for multiplayer Meta Avatar (using Meta Avatars + VRTK v4 + Photon Fusion) </br> [Multiplayer Meta Avatar Example](https://github.com/danieljharris/PARSEC/blob/main/Documentation/Multiplayer%20Meta%20Avatar%20Example.md)
 - Immersive analytics to study the benefits of 3D immersive network visualisations
 
 # Dependencies / Assets
