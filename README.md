@@ -1,4 +1,4 @@
-# PARSEC: Collaborative VR Cyber Security Network Visualiser
+# PARSEC - Collaborative VR Network Visualiser for Cyber Security
 <img align="left" width="450" src=https://github.com/danieljharris/PARSEC/assets/1362512/8e6210a9-c0ff-46fd-b576-6d159f2bab73>
 
 **PARSEC** is a virtual reality Unity project for **visualising interactive computer networks**. It was designed for cyber security data visualisation but also has potential to be used in the following use cases:
